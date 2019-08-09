@@ -1,0 +1,145 @@
+{% load static %}
+{% load compress %}
+{% load wagtailcore_tags wagtailimages_tags %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>
+        {% block title %}
+        {% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}
+        {% endblock %}
+        {% block title_suffix %}
+        {% with self.get_site.site_name as site_name %}
+        {% if site_name %}- {{ site_name }}{% endif %}
+        {% endwith %}
+        {% endblock %}
+    </title>
+    <meta name="description" content="{{ page.search_description }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}" />
+
+    {# Global stylesheets #}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/semantic.min.css' %}">
+    {% compress css file official %}
+    <!-- do not use compress with *inline* for assets load in multiple page -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/official.css' %}">
+    {% endcompress %}
+
+    {% compress css inline %}
+    {% block extra_css %}
+    {# Override this in templates to add extra stylesheets #}
+    {% endblock %}
+    {% endcompress %}
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+    <!-- Following Menu -->
+    <menu class="ui large top fixed hidden menu">
+        <div class="ui container">
+            <a class="item" href="{% slugurl 'home' %}">Home</a>
+            <a class="item" href="{% slugurl 'band' %}">Band</a>
+            <a class="item" href="{% slugurl 'shows' %}">Shows</a>
+            <a class="item" href="{% slugurl 'news' %}">News</a>
+            <a class="item" href="{% slugurl 'music' %}">Music</a>
+            <a class="item" href="{% slugurl 'contact' %}">Contact</a>
+        </div>
+    </menu>
+
+    <!-- Sidebar Menu -->
+    <nav class="ui vertical inverted sidebar menu">
+        <a class="item" href="{% slugurl 'home' %}">Home</a>
+        <a class="item" href="{% slugurl 'band' %}">Band</a>
+        <a class="item" href="{% slugurl 'shows' %}">Shows</a>
+        <a class="item" href="{% slugurl 'news' %}">News</a>
+        <a class="item" href="{% slugurl 'music' %}">Music</a>
+        <a class="item" href="{% slugurl 'contact' %}">Contact</a>
+    </nav>
+
+    <!-- Page Contents -->
+    <div class="pusher">
+        {% block topcontent %}{% endblock %}
+        <header class="ui inverted vertical masthead center aligned segment">
+            <div class="ui container">
+                <nav class="ui large secondary inverted pointing menu">
+                    <a class="toc item"> <i class="sidebar icon"></i> </a>
+                    <a class="item" href="{% slugurl 'home' %}">Home</a>
+                    <a class="item" href="{% slugurl 'band' %}">Band</a>
+                    <a class="item" href="{% slugurl 'shows' %}">Shows</a>
+                    <a class="item" href="{% slugurl 'news' %}">News</a>
+                    <a class="item" href="{% slugurl 'music' %}">Music</a>
+                    <a class="item" href="{% slugurl 'contact' %}">Contact</a>
+                </nav>
+            </div>
+            {% block header %}{% endblock %}
+        </header>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+        <footer class="ui inverted vertical footer segment">
+            <div class="ui equal height grid container">
+                <div class="row">
+                    <div class="ui grid container">
+                        <div class="eight wide tablet five wide computer column">
+                            <h4 class="ui inverted header">About</h4>
+                            <div class="ui inverted link list">
+                                <a href="{% slugurl 'sitemap' %}" class="item">Sitemap</a>
+                                <a href="{% slugurl 'contact' %}" class="item">Contact</a>
+                                <a href="{% slugurl 'site' %}" class="item">About this site</a>
+                            </div>
+                        </div>
+                        <div class="eight wide tablet three wide computer column">
+                            <h4 class="ui inverted header">Music</h4>
+                            <div class="ui inverted link list">
+                                {% for music_page in music_pages %}
+                                <a href="{{ music_page.url }}" class="item">{{ music_page.title }}</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="sixteen wide tablet eight wide computer column">
+                            <div class="ui horizontal list">
+                                <h4 class="ui inverted header">SNS</h4>
+                                {% for sns_account in sns_accounts %}
+                                <div class="item">
+                                    <a class="ui circular tiny icon button" href="{{ sns_account.account_url }}">
+                                        <i class="{{ sns_account.sns_icon_name }} icon"></i>
+                                    </a>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <p>Copyright © 2019 mosquitone. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    {# Global javascript #}
+    {% if settings.OFFICIAL_JQUERY_USE_CDN %}
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    {% else %}
+    <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    {% endif %}
+    <script type="text/javascript" src="{% static 'js/semantic.min.js' %}"></script>
+    {% compress js file official %}
+    <!-- do not use compress with *inline* for assets load in multiple page -->
+    <script type="text/javascript" src="{% static 'js/official.js' %}"></script>
+    {% endcompress %}
+
+    {% compress js inline %}
+    {% block extra_js %}
+    {# Override this in templates to add extra javascript #}
+    {% endblock %}
+    {% endcompress %}
+</body>
+
+</html>

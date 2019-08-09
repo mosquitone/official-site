@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block body_class %}template-sitemap-page{% endblock %}
+{% block content %}
+<div class="ui main text container">
+    <div class="ui vertical stripe segment">
+        <h1 class="ui centered header">Sitemap</h1>
+        <div class="ui segment container">
+            <div class="ui animated link big list">
+                {% include "./page_tree.html" %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

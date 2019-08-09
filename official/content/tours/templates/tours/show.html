@@ -1,0 +1,48 @@
+{% load wagtailcore_tags %}
+<div class="official ui center aligned segment">
+    <p class="date">{{ show.date }}</p>
+    <div class="ui top right attached label">
+        <div class="ui horizontal list">
+            {% if show.location %}
+            <a class="item" href="{{ show.location.url }}">
+                <i class="map marker alternate icon"></i>
+            </a>
+            <div class="item">
+                <div 
+                    class="official share" 
+                    data-title="{{ show.title }} - {{ show.date }} - mosquitone show"
+                    data-text="{{ show.title }}&#10;{{ show.date }}&#10;{% if show.subtitile %}{{ show.subtitile }}&#10;{% endif %}mosquitone show"
+                    >
+                    <i class="share alternate icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    <div class="ui dividing small header">
+        <h3> {{ show.title }}</h3>
+        <div class="ui accordion">
+            {% if show.subtitle %}
+            <span class="ui title sub header">
+                <i class="dropdown icon"></i>
+                {{ show.subtitle }}
+            </span>
+            {% endif %}
+            {% if show.description %}
+            <span class="ui content description">
+                <div class="ui basic segment">
+                    {{ show.description }}
+                </div>
+            </span>
+            {% endif %}
+        </div>
+    </div>
+    <div class="meta">
+        {% if show.information %}
+        <a class="ui  basic button" href="{{ show.information }}">
+            <i class="icon info"></i>
+            more information
+        </a>
+        {% endif %}
+    </div>
+</div>

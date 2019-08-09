@@ -1,0 +1,19 @@
+{% for page, children in page_tree  %}
+<div class="item">
+    <i class="{% if page.get_children_count %}folder{% else %}file{% endif %} icon"></i>
+    <div class="content">
+        <a href="{{ page.url }}" class="header">{{ page.url }}
+        </a>
+        <div class="description">{{ page.search_description }}</div>
+        <div class="ui animated list">
+            {% for child in children  %}
+            {% with child as page_tree %}
+            {% with template_name="./sitemap/page_tree.html" %}
+            {% include template_name %}
+            {% endwith %}
+            {% endwith %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endfor %}

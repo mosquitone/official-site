@@ -1,0 +1,13 @@
+.official.background.image.container {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    background-size: cover;
+    background-attachment: scroll;
+    z-index: -1;
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.8);
+}

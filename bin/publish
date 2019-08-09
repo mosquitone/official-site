@@ -1,0 +1,34 @@
+#!/bin/sh
+
+set -ue
+
+CACHE_DIR="$PWD/.cache/"
+SYNC_OPTION="--cache-control must-revalidate,public,max-age=3600"
+
+mkdir -p ${CACHE_DIR} && cd ${CACHE_DIR}
+
+echo "Start Publish"
+
+wget --no-host-directories \
+     --force-directories \
+     --adjust-extension  \
+     --execute robots=off \
+     --level=0 \
+     --recursive \
+     --domains ${SOURCE_DOMAIN}  \
+     --wait 0.1 \
+     --quiet \
+     http://${SOURCE_DOMAIN}/ || true
+wget --content-on-error \
+     --quiet \
+     --output-document=404.html \
+     http://${SOURCE_DOMAIN}/404.html || true
+
+
+if ${SYNC_SIZE_ONLY:-true}; then
+SYNC_OPTION="${SYNC_OPTION} --size-only"
+fi
+
+aws s3 sync ${SYNC_OPTION:+${SYNC_OPTION}} . s3://${AWS_BUCKET_NAME}
+
+echo "Publish Success"

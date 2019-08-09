@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block body_class %}template-newsindexpage{% endblock %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+<div class="ui vertical stripe segment">
+    <div class="ui middle aligned stackable grid container">
+        <div class="row">
+            <div class="center aligned column">
+                <h1 class="ui header">
+                    {{ page.title }}
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="ui text main container">
+                    <div class="ui divided items">
+                        {% for music_page in music_pages %}
+                        {% with music=music_page.specific %}
+                        <div class="item">
+                            {% with music.artwork as artwork %}
+                            <div class="ui image">
+                                {% image artwork max-300x300 %}
+                            </div>
+                            {% endwith %}
+                            <div class="content">
+                                <a class="header" href="{% pageurl music %}">
+                                    <h2>{{ music.title }}</h2>
+                                </a>
+                                <div class="meta">
+                                    {{ music.copy }}
+                                </div>
+                                <div class="extra">
+                                    <span class="date">{{ music.release_date }} </span>
+                                    <span>release</span>
+                                </div>
+                                <div class="description">
+                                    <div class="ui accordion">
+                                        <div class="title">
+                                            <div class="ui sub header">
+                                                <i class="dropdown icon"></i>
+                                                Tracks</div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="ui mini celled ordered list">
+                                                {% for track in music.tracks.all %}
+                                                <div class="item">
+                                                    <div class="content">
+                                                        <div class="header">
+                                                            {{ track.title }}
+                                                        </div>
+                                                        <div class="description">
+                                                            {{ track.duration }}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endwith %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

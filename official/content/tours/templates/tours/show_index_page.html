@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags wagtailimages_tags static %}
+
+{% block body_class %}template-newsindexpage{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'tours/css/show_index_page.css' %}">
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+{% block content %}
+
+<div class="ui vertical inverted stripe segment">
+    <div class="official main">
+        {% image page.background_image width-1200 as background_image %}
+        <div class="official background image container" style="background-image: url('{{ background_image.url }}')">
+        </div>
+        <div class="ui middle aligned centered stackable grid container">
+            <div class="row">
+                <h1 class="ui inverted center aligned header">
+                    {{ page.title }}
+                </h1>
+            </div>
+            <div class="row">
+                <div class="center aligned column">
+                    <h2 class="ui inverted horizontal divider header">
+                        Upcomming
+                    </h2>
+                </div>
+            </div>
+            {% for show in upcomming_show %}
+            <div class="row">
+                <div class="center aligned ten wide column">
+                    {% include './show.html' %}
+                </div>
+            </div>
+            {% endfor %}
+            <div class="row">
+                <div class="center aligned column">
+                    <h2 class="ui inverted horizontal divider header">
+                        Past
+                    </h2>
+                </div>
+            </div>
+            {% for show in past_show %}
+            <div class="row">
+                <div class="center aligned ten wide column">
+                    {% include './show.html' %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

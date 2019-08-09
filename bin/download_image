@@ -1,0 +1,8 @@
+#!/bin/sh
+
+set -ue
+
+MEDIA_DIR="$PWD/media/"
+for folder in images original_images; do
+aws s3 sync "s3://${AWS_BUCKET_NAME}/${folder}" "${MEDIA_DIR}/${folder}"
+done

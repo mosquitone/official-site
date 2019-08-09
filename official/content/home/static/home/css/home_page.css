@@ -1,0 +1,75 @@
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+.masthead.segment {
+  min-height: 0px !important;
+  height: 100vh;
+}
+
+.official.header {
+  font-size: 2em;
+  text-align: center;
+  margin-top: 0px !important;
+}
+
+.official.sub.header {
+  font-size: 1em;
+}
+
+.official.landing.background {
+  text-align: center;
+  align-content: center;
+}
+
+.official.landing.background>.image {
+  background-position: 50% 30%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: local, scroll;
+  position: fixed;
+  height: 60vh;
+  width: 100%;
+  display: block;
+}
+
+.official.landing.background>.window {
+  z-index: 2;
+  width: 100vw;
+  position: absolute;
+}
+
+.official.landing.background>.window::before {
+  content: "";
+  height: 30vh;
+  width: 100%;
+  position: relative;
+  background-color: rgb(27, 28, 29);
+  display: block;
+}
+
+.official.landing.background>.window::after {
+  content: "";
+  height: 50vh;
+  width: 100%;
+  position: relative;
+  background-color: rgb(27, 28, 29);
+  display: block;
+}
+
+@media only screen and (max-width: 700px) {
+  .masthead.segment {
+    min-height: 0px !important;
+    height: 70vh;
+  }
+  .official.landing.background>.window::before {
+    height: 20vh;
+  }
+  .official.landing.background>.window::after {
+    height: 30vh;
+  }
+  .official.landing.background::before {
+    height: 50vh;
+  }
+}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags wagtailimages_tags static %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'home/css/home_page.css' %}">
+{% endblock %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block header %}
+<div class="official landing background header container">
+    {% image page.background_image width-700 as background_image %}
+    <div class="image" style="background-image: url('{{ background_image.url }}')"></div>
+    <div class="window">
+        <h1 class="official center aligned header">
+            mosquitone
+        </h1>
+        <h2 class="official center aligned sub header">Keep gooing forward</h2>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="ui vertical inverted basic segment">
+    {{ page.body | richtext }}
+</div>
+{% endblock %}

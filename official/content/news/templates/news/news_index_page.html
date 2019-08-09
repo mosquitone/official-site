@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% load static wagtailcore_tags wagtailimages_tags %}
+
+{% block body_class %}template-newsindexpage{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'news/css/news_index_page.css' %}">
+{% endblock %}
+
+{% block topcontent %}
+{% endblock %}
+
+{% block content %}
+{% image page.background_image width-1200 as background_image %}
+<div class="official background image container" style="background-image: url('{{ background_image.url }}')">
+    <div class="ui vertical stripe segment">
+        <div class="ui text main container">
+            <div class="ui segment basic center aligned">
+                <h1 class="official ui header">
+                    {{ page.title }}
+                </h1>
+                {% if tag %}
+                <h2 class="ui sub header">
+                    <span>filter by : </span> <span class="ui tag label">{{tag}}</span>
+                </h2>
+                <div class="intro"> {{ page.intro|richtext }} </div>
+                {% endif %}
+            </div>
+            <div class="ui container">
+                {% if not newspages %}
+                <div class="ui icon message">
+                    <i class="question circle icon"></i>
+                    <div class="content">
+                        <div class="header">
+                            Oops! There is no content for specified tag.
+                        </div>
+                        {% if tag %}
+                        <p>Will you try to <a href="{% slugurl 'news' %}">disable filter by tag</a>?</p>
+                        {% endif %}
+                    </div>
+                </div>
+                {% else %}
+                <div class="official ui divided relaxed items segment">
+                    {% for post in newspages %}
+                    {% with post=post.specific %}
+                    <div class="ui link item">
+                        {% with post.main_image as main_image %}
+                        {% if main_image %}
+                        <div class="ui tiny image">
+                            {% image main_image max-200x200 %}
+                        </div>
+                        {% endif %}
+                        {% endwith %}
+                        <div class="content">
+                            <div class="meta">
+                                <span class="date"> {{ post.date }} </span>
+                            </div>
+                            <a class="header" href="{% pageurl post %}">{{ post.title }}</a>
+                            <div class="description">
+                                {{ post.intro }}
+                            </div>
+                        </div>
+                        {% endwith %}
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

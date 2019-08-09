@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'contact/css/contact_page.css' %}">
+{% endblock %}
+
+{% block body_class %}template-newspage{% endblock %}
+{% block header %}
+{% endblock %}
+{% block content %}
+<div class="official ui vertical stripe segment">
+    <div class="ui center aligned grid">
+        {% image page.main_image width-1200 as main_image %}
+        <div class="official main image container row" style="background-image: url('{{ main_image.url }}')">
+            <h1 class="ui inverted centered header">{{ page.title }}</h1>
+        </div>
+        <div class="row">
+            <h2 class="ui header">Booking or General infomation</h2>
+        </div>
+        <div class="row">
+            <a href="mailto:mosquitone8+contacts@gmail.com&subject=Ex.【ライブ出演依頼】【質問】">
+                <h3 class="ui tiny icon header">
+                    <i class="mail icon"></i>
+                </h3>
+            </a>
+        </div>
+        <div class="ui row divider"></div>
+        <div class="row">
+            <h2 class="ui header">SNS</h2>
+        </div>
+        <div class="row">
+            <div class="ui horizontal list">
+                {% for sns_account in sns_accounts %}
+                <div class="item">
+                    <a href="{{ sns_account.account_url }}">
+                        <h3 class="ui tiny icon header">
+                            <i class="{{ sns_account.sns_icon_name }} icon"></i>
+                            <div class="ui basic pointing mini label">
+                                {{ sns_account.account_name }}
+                            </div>
+                        </h3>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

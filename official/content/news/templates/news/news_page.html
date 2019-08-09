@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+
+{% load wagtailcore_tags wagtailimages_tags wagtailroutablepage_tags %}
+
+
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'news/css/news_page.css' %}">
+{% endblock %}
+
+{% block body_class %}template-newspage{% endblock %}
+
+{% block content %}
+<div class="ui main text container">
+    <h1 class="ui header">{{ page.title }}</h1>
+    <p class="ui sub header">{{ page.intro }}</p>
+    <div class="ui feed">
+        <div class="event">
+            <div class="label">
+                {% if page.author %}
+                {% image page.author.avator max-50x50 %}
+                {% else %}
+                <img src="{% static 'image/mosquitone-avator.png' %}">
+                {% endif %}
+            </div>
+            <div class="content">
+                <span class="date">{{ page.date }}</span>
+            </div>
+            <div class="extra labels">
+                {% for category in page.categories.all %}
+                <div class="ui label">
+                    {% image category.icon fill-32x32 class='ui right spaced avatar image' %}
+                    {{ category.name }}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="ui divider"></div>
+    <div class="content">
+        {{ page.body|richtext }}
+    </div>
+    <div class="ui divider"></div>
+    <div class="extra">
+        {% if page.tags.all.count %}
+        {% for tag in page.tags.all %}
+        <a class="ui tag label" href="{% routablepageurl page.news_index_page 'news_by_tag' tag.slug %}">{{tag}}</a>
+        {% endfor %}
+        {% endif %}
+    </div>
+    <p><a href="{% slugurl 'news' %}">Return to news</a></p>
+</div>
+
+{% endblock %}

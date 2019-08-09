@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags wagtailimages_tags wagtailroutablepage_tags %}
+
+{% load static %}
+
+{% block body_class %}template-newspage{% endblock %}
+
+{% block content %}
+<div class="ui vertical stripe segment">
+    <h1 class="ui center aligned header">
+        {{ page.title }}
+    </h1>
+
+    <div class="ui vertical segment container">
+        <h2 class="ui header">
+            Development
+        </h2>
+        <p>
+            This site is developed by mosquitone.
+        </p>
+    </div>
+    <div class="ui vertical segment container">
+        <h2 class="ui header">
+            OSS Tools
+        </h2>
+        <p>
+            This site is powered by following OSSs.
+            We really appreciate their community's awesome works.
+        </p>
+        <ul>
+            <li><a href="https://wagtail.io/">Django Content Management System | Wagtail CMS</a></li>
+            <li><a href="https://semantic-ui.com">Semantic UI</a></li>
+        </ul>
+    </div>
+    <div class="ui vertical segment container">
+        <h2 class="ui header">
+            Cloud Service Provider
+        </h2>
+        <p>
+            This site is hosted on following cloud services.
+        </p>
+        <ul>
+            <li><a href="https://www.heroku.com/">Heroku: Cloud Application Platform</a></li>
+            <li><a href="https://aws.amazon.com">Amazon Web Services (AWS) - Cloud Computing Services</a></li>
+        </ul>
+    </div>
+    <div class="ui vertical segment container">
+        <h2 class="ui header">
+            Other: This site is ...
+        </h2>
+        <ul>
+            <li>
+                Domain(www.mosquit.one) is registered by <a href="https://www.gandi.net/">gandi.net</a>.
+            </li>
+            <li>
+                Source code is hosted on <a href="https://github.com">GitHub</a>.
+            </li>
+            <li>
+                Analyzed by <a href="https://github.com/GoogleChrome/lighthouse">lighthouse</a> for improving the
+                quality of web pages.
+            </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
