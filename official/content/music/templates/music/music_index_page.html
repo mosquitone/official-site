@@ -10,18 +10,18 @@
 {% endblock %}
 
 {% block content %}
-<div class="ui vertical stripe segment">
+<div class="ui inverted vertical stripe segment">
     <div class="ui middle aligned stackable grid container">
         <div class="row">
             <div class="center aligned column">
-                <h1 class="ui header">
+                <h1 class="ui inverted header">
                     {{ page.title }}
                 </h1>
             </div>
         </div>
         <div class="row">
             <div class="column">
-                <div class="ui text main container">
+                <div class="ui text main segment container">
                     <div class="ui divided items">
                         {% for music_page in music_pages %}
                         {% with music=music_page.specific %}
