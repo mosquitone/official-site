@@ -1,5 +1,5 @@
 
-$(document)
+$(window)
   .on('load', function () {
     $('.masthead .official.header.container').transition(
       {
