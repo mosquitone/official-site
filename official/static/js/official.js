@@ -1,5 +1,11 @@
 $(document)
   .ready(function () {
+    // change wagtail richtext to semantic ui container
+    $('div.rich-text').each(function (_, e) {
+      e.classList.remove('rich-text');
+      e.classList.add('ui', 'container');
+    })
+
     // fix menu when passed
     $('.masthead')
       .visibility({
