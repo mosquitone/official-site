@@ -43,6 +43,9 @@ class MusicPage(Page):
         'wagtailimages.Image', null=True, blank=False,
         on_delete=models.SET_NULL, related_name='artwork'
     )
+    bandcamp_album_url = models.URLField(null=True, blank=True)
+    bandcamp_player_url = models.URLField(null=True, blank=True)
+    youtube_url = models.URLField(null=True, blank=True)
 
     @property
     def music_index_page(self):
@@ -60,6 +63,9 @@ class MusicPage(Page):
         ], heading="Music information"),
         FieldPanel('copy'),
         FieldPanel('description'),
+        FieldPanel('youtube_url'),
+        FieldPanel('bandcamp_album_url'),
+        FieldPanel('bandcamp_player_url'),
         InlinePanel('tracks', label="Tracks"),
     ]
 
