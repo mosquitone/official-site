@@ -11,6 +11,7 @@
 git clone https://github.com/mosquitone/official-site.git && cd official-site
 pipenv install && pipenv shell
 python ./manage.py migrate
+heroku login
 ```
 
 ## Start app
@@ -24,13 +25,19 @@ python ./manage.py runserver
 publish staging to production
 
 ```bash
-heroku login
-heroku run --app mosquitone ./publish.sh
+heroku run --app mosquitone ./bin/publish
 ```
 
-## Initial Data
+## Load Initial Data
+
+before download images, you need to create .env and define following env vars.
+
+- AWS_ACCESS_KEY_ID
+- AWS_BUCKET_NAME
+- AWS_DEFAULT_REGION
+- AWS_SECRET_ACCESS_KEY
 
 ```bash
 python ./manage.py loaddata ./official/fixtures/latest.json
-env $(cat .env | xargs) ./download_image.sh
+env $(cat .env | xargs) ./bin/download_image
 ```
