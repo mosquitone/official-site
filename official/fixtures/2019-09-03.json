@@ -3,14 +3,14 @@
   "model": "about.member",
   "pk": 1,
   "fields": {
-    "japanese_name": "\u8fbb\u672c \u7d43\u592a\u6717",
+    "japanese_name": "\u8fbb\u672c \u7d43\u592a\u90ce",
     "english_name": "Tsujimoto Gentarou",
     "part": "Guitar, Vocal",
     "copy": "\u3068\u306b\u304b\u304f\u5148\u306b\u9032\u3080\u3057\u304b\u306a\u3044\uff01",
     "japanese_description": "mosquitone \u306e\u5275\u8a2d\u8005\u306b\u3057\u3066\u6211\u3005\u306e\u5e0c\u671b",
     "english_description": "mosquitone founder and our hope",
-    "avator": 3,
-    "icon": 2,
+    "avator": 23,
+    "icon": 21,
     "priority": 100,
     "twitter": null,
     "facebook": null,
@@ -77,7 +77,7 @@
   "fields": {
     "summary": "\u7d43\u592a\u90ce\u3055\u3093\u767a\u8d77",
     "date": "2018-03-01",
-    "text": "\u7d43\u592a\u6717\u3055\u3093\u304c\u30d0\u30f3\u30c9\u6d3b\u52d5\u3092\u59cb\u3081\u308b",
+    "text": "\u7d43\u592a\u90ce\u3055\u3093\u304c\u30d0\u30f3\u30c9\u6d3b\u52d5\u3092\u59cb\u3081\u308b",
     "by": 1
   }
 },
@@ -87,7 +87,7 @@
   "fields": {
     "summary": "\u5c71\u4e0bjoin",
     "date": "2018-04-01",
-    "text": "\u5c71\u4e0b\u304c\u7d43\u592a\u6717\u3055\u3093\u306b\u8a98\u308f\u308c\u4e00\u7dd2\u306b\u6d3b\u52d5\u3059\u308b\u3053\u3068\u306b",
+    "text": "\u5c71\u4e0b\u304c\u7d43\u592a\u90ce\u3055\u3093\u306b\u8a98\u308f\u308c\u4e00\u7dd2\u306b\u6d3b\u52d5\u3059\u308b\u3053\u3068\u306b",
     "by": 4
   }
 },
@@ -153,10 +153,38 @@
 },
 {
   "model": "news.newspagetag",
-  "pk": 5,
+  "pk": 14,
   "fields": {
     "tag": 7,
     "content_object": 12
+  }
+},
+{
+  "model": "news.newspagetag",
+  "pk": 20,
+  "fields": {
+    "tag": 6,
+    "content_object": 14
+  }
+},
+{
+  "model": "news.newspagegalleryimage",
+  "pk": 1,
+  "fields": {
+    "sort_order": 0,
+    "page": 14,
+    "image": 19,
+    "caption": ""
+  }
+},
+{
+  "model": "news.newspagegalleryimage",
+  "pk": 2,
+  "fields": {
+    "sort_order": 0,
+    "page": 12,
+    "image": 22,
+    "caption": ""
   }
 },
 {
@@ -312,6 +340,23 @@
   }
 },
 {
+  "model": "wagtailembeds.embed",
+  "pk": 1,
+  "fields": {
+    "url": "https://youtu.be/IDVYa-05hgM",
+    "max_width": null,
+    "type": "video",
+    "html": "<iframe width=\"480\" height=\"270\" src=\"https://www.youtube.com/embed/IDVYa-05hgM?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+    "title": "mosquitone - My Sadness (Official Music Video)",
+    "author_name": "mosquitone",
+    "provider_name": "YouTube",
+    "thumbnail_url": "https://i.ytimg.com/vi/IDVYa-05hgM/hqdefault.jpg",
+    "width": 480,
+    "height": 270,
+    "last_updated": "2019-09-03T09:33:36.677Z"
+  }
+},
+{
   "model": "wagtailcore.site",
   "pk": 1,
   "fields": {
@@ -426,6 +471,14 @@
   "fields": {
     "name": "artwork",
     "slug": "artwork"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 13,
+  "fields": {
+    "name": "demo",
+    "slug": "demo"
   }
 },
 {
@@ -574,42 +627,6 @@
 },
 {
   "model": "taggit.taggeditem",
-  "pk": 13,
-  "fields": {
-    "tag": 1,
-    "content_type": [
-      "wagtailimages",
-      "image"
-    ],
-    "object_id": 13
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 14,
-  "fields": {
-    "tag": 9,
-    "content_type": [
-      "wagtailimages",
-      "image"
-    ],
-    "object_id": 13
-  }
-},
-{
-  "model": "taggit.taggeditem",
-  "pk": 15,
-  "fields": {
-    "tag": 9,
-    "content_type": [
-      "wagtailimages",
-      "image"
-    ],
-    "object_id": 14
-  }
-},
-{
-  "model": "taggit.taggeditem",
   "pk": 16,
   "fields": {
     "tag": 1,
@@ -678,6 +695,54 @@
       "image"
     ],
     "object_id": 19
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 23,
+  "fields": {
+    "tag": 13,
+    "content_type": [
+      "wagtailimages",
+      "image"
+    ],
+    "object_id": 24
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 24,
+  "fields": {
+    "tag": 1,
+    "content_type": [
+      "wagtailimages",
+      "image"
+    ],
+    "object_id": 13
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 25,
+  "fields": {
+    "tag": 9,
+    "content_type": [
+      "wagtailimages",
+      "image"
+    ],
+    "object_id": 13
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 26,
+  "fields": {
+    "tag": 9,
+    "content_type": [
+      "wagtailimages",
+      "image"
+    ],
+    "object_id": 14
   }
 },
 {
@@ -773,7 +838,7 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$150000$CvMbqRXSZeoE$VJaDbvIokjWt5esWKj7Ko65Ss9gYK9J7biL0G6pK2xo=",
-    "last_login": "2019-09-02T16:02:39.268Z",
+    "last_login": "2019-09-03T03:34:12.433Z",
     "is_superuser": true,
     "username": "yyamashita",
     "first_name": "",
@@ -791,7 +856,7 @@
   "pk": 2,
   "fields": {
     "password": "pbkdf2_sha256$150000$o9t0wofKHPwf$gdfuBZMpg4XkeMnjfd5hhQTlkQOplX72c77zB8QYQLw=",
-    "last_login": null,
+    "last_login": "2019-09-03T03:47:25.906Z",
     "is_superuser": true,
     "username": "gentarou",
     "first_name": "tsujimoto",
@@ -816,7 +881,7 @@
   "pk": 3,
   "fields": {
     "password": "pbkdf2_sha256$150000$oYfKRG2zXQtd$n2UCD/kTrKVCCUlXNYt8OaOZPfN6cXSN8diYt7uUi8g=",
-    "last_login": null,
+    "last_login": "2019-09-03T09:58:30.720Z",
     "is_superuser": true,
     "username": "miyazaki",
     "first_name": "masanori",
@@ -841,7 +906,7 @@
   "pk": 4,
   "fields": {
     "password": "pbkdf2_sha256$150000$W6IORdD9ghGP$rqyzGpGswB4NT0VVLv7eMrqVS8trWQBW+AAiA61Uu1w=",
-    "last_login": "2019-09-02T13:22:25.547Z",
+    "last_login": "2019-09-03T02:46:40.227Z",
     "is_superuser": true,
     "username": "chikara",
     "first_name": "chikara",
@@ -1576,6 +1641,412 @@
   }
 },
 {
+  "model": "wagtailcore.pagerevision",
+  "pk": 53,
+  "fields": {
+    "page": 11,
+    "submitted_for_moderation": false,
+    "created_at": "2019-09-03T01:25:24.565Z",
+    "user": [
+      "yyamashita"
+    ],
+    "content_json": "{\"pk\": 11, \"path\": \"0001000200030001\", \"depth\": 4, \"numchild\": 0, \"title\": \"Demo#1\", \"draft_title\": \"Demo#1\", \"slug\": \"demo1\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/music/demo1/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-08-09T17:51:33.847Z\", \"last_published_at\": \"2019-09-02T15:33:09.867Z\", \"latest_revision_created_at\": \"2019-09-02T15:33:09.827Z\", \"live_revision\": 50, \"release_date\": \"2019-09-01\", \"copy\": \"First demo\", \"description\": \"<p>mosquitone \\u3068\\u3057\\u3066\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u3067\\u3059\\u3002<br/>\\u540c\\u3058\\u304f mosquitone \\u3068\\u3057\\u3066\\u6700\\u521d\\u306e\\u30aa\\u30ea\\u30b8\\u30ca\\u30eb\\u697d\\u66f2\\u300cKeep going forward\\u300d,\\u300cMy sadness \\u300d\\u306e\\uff12\\u66f2\\u3092\\u53ce\\u9332\\u3002<br/>bandcamp \\u3067\\u30a2\\u30eb\\u30d0\\u30e0\\u8996\\u8074\\uff06\\u30c0\\u30a6\\u30f3\\u30ed\\u30fc\\u30c9\\u306e\\u4ed6\\u3001youtube \\u3067\\u30ec\\u30b3\\u30fc\\u30c7\\u30a3\\u30f3\\u30b0\\u98a8\\u666f\\u3092\\u53ce\\u3081\\u305f\\u300cMy sadness\\u300dMV\\u98a8\\u52d5\\u753b\\u3092\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059!\\u3002</p>\", \"artwork\": 19, \"bandcamp_album_url\": \"http://mosquitone.bandcamp.com/album/demo-01\", \"bandcamp_player_url\": \"https://bandcamp.com/EmbeddedPlayer/album=3118256726/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/tracklist=true/transparent=true/\", \"youtube_url\": \"https://youtu.be/IDVYa-05hgM\", \"tracks\": [{\"pk\": 1, \"sort_order\": 0, \"page\": 11, \"title\": \"My sadness\", \"duration\": \"00:04:00\"}, {\"pk\": 2, \"sort_order\": 1, \"page\": 11, \"title\": \"Keep going forward\", \"duration\": \"00:03:50\"}]}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 54,
+  "fields": {
+    "page": 4,
+    "submitted_for_moderation": false,
+    "created_at": "2019-09-03T02:44:59.852Z",
+    "user": [
+      "chikara"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100020001\", \"depth\": 3, \"numchild\": 0, \"title\": \"About us\", \"draft_title\": \"About us\", \"slug\": \"band\", \"content_type\": 7, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/band/\", \"owner\": 1, \"seo_title\": \"About us (Band)\", \"show_in_menus\": true, \"search_description\": \"mosquitone \\u306e\\u6b74\\u53f2 (History)\\u3001\\u30e1\\u30f3\\u30d0\\u30fc (Members) \\u60c5\\u5831\\u3067\\u3059\\u3002\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-08-09T16:32:26.832Z\", \"last_published_at\": \"2019-08-16T18:14:31.666Z\", \"latest_revision_created_at\": \"2019-08-16T18:14:31.627Z\", \"live_revision\": 40, \"intro\": \"<p>mosquitone (\\u3082\\u3059\\u304d\\u30fc\\u3068\\u30fc\\u3093)\\u306f\\u6771\\u4eac\\u767a\\u306e\\u30a8\\u30e2\\u30d0\\u30f3\\u30c9\\u3067\\u3059\\u3002</p><p>\\u300cKeep going forward\\u300d\\u3092\\u30c6\\u30fc\\u30de\\u306b\\u90fd\\u5185\\u3067\\u7cbe\\u529b\\u7684\\u306b\\u6d3b\\u52d5\\u3057\\u3066\\u3044\\u307e\\u3059\\u3002</p><p><a id=\\\"9\\\" linktype=\\\"page\\\">\\u30e9\\u30a4\\u30d6</a>\\u3078\\u306e\\u51fa\\u6f14\\u4f9d\\u983c\\u306a\\u3069\\u3001\\u304a\\u554f\\u3044\\u5408\\u308f\\u305b\\u306f <a id=\\\"5\\\" linktype=\\\"page\\\">Contact</a> \\u304b\\u3089\\u3088\\u308d\\u3057\\u304f\\u304a\\u9858\\u3044\\u3044\\u305f\\u3057\\u307e\\u3059\\uff01</p>\", \"english_history\": \"\", \"japanese_history\": \"\", \"main_image\": 1, \"background_image\": 13}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 55,
+  "fields": {
+    "page": 4,
+    "submitted_for_moderation": false,
+    "created_at": "2019-09-03T02:47:03.703Z",
+    "user": [
+      "chikara"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100020001\", \"depth\": 3, \"numchild\": 0, \"title\": \"About us\", \"draft_title\": \"About us\", \"slug\": \"band\", \"content_type\": 7, \"live\": true, \"has_unpublished_changes\": true, \"url_path\": \"/home/band/\", \"owner\": 1, \"seo_title\": \"About us (Band)\", \"show_in_menus\": true, \"search_description\": \"mosquitone \\u306e\\u6b74\\u53f2 (History)\\u3001\\u30e1\\u30f3\\u30d0\\u30fc (Members) \\u60c5\\u5831\\u3067\\u3059\\u3002\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-08-09T16:32:26.832Z\", \"last_published_at\": \"2019-08-16T18:14:31.666Z\", \"latest_revision_created_at\": \"2019-09-03T02:44:59.852Z\", \"live_revision\": 40, \"intro\": \"<p>mosquitone (\\u3082\\u3059\\u304d\\u30fc\\u3068\\u30fc\\u3093)\\u306f\\u6771\\u4eac\\u767a\\u306e\\u30a8\\u30e2\\u30d0\\u30f3\\u30c9\\u3067\\u3059\\u3002</p><p>\\u300cKeep going forward\\u300d\\u3092\\u30c6\\u30fc\\u30de\\u306b\\u90fd\\u5185\\u3067\\u7cbe\\u529b\\u7684\\u306b\\u6d3b\\u52d5\\u3057\\u3066\\u3044\\u307e\\u3059\\u3002</p><p><a id=\\\"9\\\" linktype=\\\"page\\\">\\u30e9\\u30a4\\u30d6</a>\\u3078\\u306e\\u51fa\\u6f14\\u4f9d\\u983c\\u306a\\u3069\\u3001\\u304a\\u554f\\u3044\\u5408\\u308f\\u305b\\u306f <a id=\\\"5\\\" linktype=\\\"page\\\">Contact</a> \\u304b\\u3089\\u3088\\u308d\\u3057\\u304f\\u304a\\u9858\\u3044\\u3044\\u305f\\u3057\\u307e\\u3059\\uff01</p>\", \"english_history\": \"\", \"japanese_history\": \"\", \"main_image\": 1, \"background_image\": 13}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 56,
+  "fields": {
+    "page": 11,
+    "submitted_for_moderation": false,
+    "created_at": "2019-09-03T03:36:13.844Z",
+    "user": [
+      "yyamashita"
+    ],
+    "content_json": "{\"pk\": 11, \"path\": \"0001000200030001\", \"depth\": 4, \"numchild\": 0, \"title\": \"Demo#1\", \"draft_title\": \"Demo#1\", \"slug\": \"demo1\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/music/demo1/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-08-09T17:51:33.847Z\", \"last_published_at\": \"2019-09-03T01:25:24.612Z\", \"latest_revision_created_at\": \"2019-09-03T01:25:24.565Z\", \"live_revision\": 53, \"release_date\": \"2019-09-01\", \"copy\": \"First demo\", \"description\": \"<p>mosquitone \\u3068\\u3057\\u3066\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u3067\\u3059\\u3002<br/>\\u540c\\u3058\\u304f mosquitone \\u3068\\u3057\\u3066\\u6700\\u521d\\u306e\\u30aa\\u30ea\\u30b8\\u30ca\\u30eb\\u697d\\u66f2\\u300cKeep going forward\\u300d,\\u300cMy sadness \\u300d\\u306e\\uff12\\u66f2\\u3092\\u53ce\\u9332\\u3002<br/>bandcamp \\u3067\\u30a2\\u30eb\\u30d0\\u30e0\\u8996\\u8074\\uff06\\u30c0\\u30a6\\u30f3\\u30ed\\u30fc\\u30c9\\u306e\\u4ed6\\u3001youtube \\u3067\\u30ec\\u30b3\\u30fc\\u30c7\\u30a3\\u30f3\\u30b0\\u98a8\\u666f\\u3092\\u53ce\\u3081\\u305f\\u300cMy sadness\\u300dMV\\u98a8\\u52d5\\u753b\\u3092\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059!</p>\", \"artwork\": 19, \"bandcamp_album_url\": \"http://mosquitone.bandcamp.com/album/demo-01\", \"bandcamp_player_url\": \"https://bandcamp.com/EmbeddedPlayer/album=3118256726/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/tracklist=true/transparent=true/\", \"youtube_url\": \"https://youtu.be/IDVYa-05hgM\", \"tracks\": [{\"pk\": 1, \"sort_order\": 0, \"page\": 11, \"title\": \"My sadness\", \"duration\": \"00:04:00\"}, {\"pk\": 2, \"sort_order\": 1, \"page\": 11, \"title\": \"Keep going forward\", \"duration\": \"00:03:50\"}]}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 57,
+  "fields": {
+    "page": 14,
+    "submitted_for_moderation": false,
+    "created_at": "2019-09-03T09:24:28.037Z",
+    "user": [
+      "yyamashita"
+    ],
+    "content_json": "{\"pk\": 14, \"path\": \"0001000200040002\", \"depth\": 4, \"numchild\": 0, \"title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"draft_title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"slug\": \"\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"content_type\": 10, \"live\": false, \"has_unpublished_changes\": false, \"url_path\": \"/home/news/\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"date\": \"2019-09-03\", \"intro\": \"\\u3053\\u306e\\u5ea6 mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\\u3053\\u3068\\u3092\\u304a\\u77e5\\u3089\\u305b\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002\", \"body\": \"<p>\\u3053\\u3093\\u306b\\u3061\\u306f\\u3002</p><p>\\u3053\\u306e\\u5ea6\\u3001mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u3068\\u306a\\u308b\\u300cdemo #01\\u300d</p>\", \"author\": null, \"tagged_items\": [{\"pk\": 6, \"tag\": 6, \"content_object\": 14}], \"gallery_images\": [], \"categories\": []}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 58,
+  "fields": {
+    "page": 14,
+    "submitted_for_moderation": false,
+    "created_at": "2019-09-03T09:28:56.125Z",
+    "user": [
+      "yyamashita"
+    ],
+    "content_json": "{\"pk\": 14, \"path\": \"0001000200040002\", \"depth\": 4, \"numchild\": 0, \"title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"draft_title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"slug\": \"\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"content_type\": 10, \"live\": false, \"has_unpublished_changes\": true, \"url_path\": \"/home/news/\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": \"2019-09-03T09:24:28.037Z\", \"live_revision\": null, \"date\": \"2019-09-03\", \"intro\": \"\\u3053\\u306e\\u5ea6 mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\\u3053\\u3068\\u3092\\u304a\\u77e5\\u3089\\u305b\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002\", \"body\": \"<p>\\u3053\\u3093\\u306b\\u3061\\u306f\\u3002</p><p>\\u3053\\u306e\\u5ea6\\u3001mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u3068\\u306a\\u308b\\u300c<a id=\\\"11\\\" linktype=\\\"page\\\">demo#01</a>\\u300d\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\\u3002</p><p><a href=\\\"https://mosquitone.bandcamp.com/album/demo-01\\\">bandcamp</a> \\u3067\\u306e\\u97f3\\u6e90\\u8996\\u8074\\u306e\\u4ed6\\u3001<a href=\\\"https://www.youtube.com/channel/UCkGHjxTGURpNC6kCpwscKyg?view_as=subscriber\\\">Youtube \\u516c\\u5f0f\\u30c1\\u30e3\\u30f3\\u30cd\\u30eb</a> \\u3067\\u3001\\u672c\\u97f3\\u6e90\\u53ce\\u9332\\u306e\\u69d8\\u5b50\\u3092 <a href=\\\"https://youtu.be/IDVYa-05hgM\\\">My sadness MV\\u98a8\\u30d3\\u30c7\\u30aa</a> \\u3067\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059\\uff01(\\u30a8\\u30e2\\u3044\\u306a\\u3041\\uff01)</p><p>\\u5f15\\u304d\\u7d9a\\u304d\\u3088\\u308d\\u3057\\u304f\\u304a\\u9858\\u3044\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002</p>\", \"author\": null, \"tagged_items\": [{\"pk\": null, \"tag\": 6, \"content_object\": 14}], \"gallery_images\": [{\"pk\": null, \"sort_order\": 0, \"page\": 14, \"image\": 19, \"caption\": \"\"}], \"categories\": []}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 59,
+  "fields": {
+    "page": 12,
+    "submitted_for_moderation": false,
+    "created_at": "2019-09-03T09:29:22.191Z",
+    "user": [
+      "yyamashita"
+    ],
+    "content_json": "{\"pk\": 12, \"path\": \"0001000200040001\", \"depth\": 4, \"numchild\": 0, \"title\": \"mosquitone \\u516c\\u5f0f\\u30b5\\u30a4\\u30c8\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\", \"draft_title\": \"mosquitone \\u516c\\u5f0f\\u30b5\\u30a4\\u30c8\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\", \"slug\": \"mosquitone-\\u516c\\u5f0f\\u30b5\\u30a4\\u30c8\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\", \"content_type\": 10, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/news/mosquitone-\\u516c\\u5f0f\\u30b5\\u30a4\\u30c8\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-08-09T17:57:22.638Z\", \"last_published_at\": \"2019-09-02T16:15:01.896Z\", \"latest_revision_created_at\": \"2019-09-02T16:15:01.847Z\", \"live_revision\": 52, \"date\": \"2019-09-02\", \"intro\": \"\\u3053\\u306e\\u5ea6 mosquitone \\u304c\\u516c\\u5f0f\\u30b5\\u30a4\\u30c8\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\\u3053\\u3068\\u3092\\u304a\\u77e5\\u3089\\u305b\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002\", \"body\": \"<p>\\u3053\\u306e\\u5ea6 mosquitone \\u304c <a id=\\\"3\\\" linktype=\\\"page\\\">\\u516c\\u5f0f\\u30b5\\u30a4\\u30c8</a> \\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\\u3002</p><p>\\u3053\\u306e\\u30b5\\u30a4\\u30c8\\u306f <a id=\\\"9\\\" linktype=\\\"page\\\">\\u30e9\\u30a4\\u30d6\\u60c5\\u5831</a> \\u3084 <a id=\\\"6\\\" linktype=\\\"page\\\">\\u97f3\\u6e90</a> \\u306a\\u3069\\u3001mosquitone \\u306e\\u69d8\\u3005\\u306a\\u6d3b\\u52d5\\u30fb\\u60c5\\u5831\\u3092\\u767a\\u4fe1\\u3059\\u308b\\u30dd\\u30fc\\u30bf\\u30eb\\u3067\\u3059\\u3002</p><p>\\u4eca\\u307e\\u3067\\u60c5\\u5831\\u3092\\u767a\\u4fe1\\u3057\\u3066\\u304d\\u307e\\u3057\\u305f <a id=\\\"5\\\" linktype=\\\"page\\\">SNS</a> \\b\\u3082\\u3001\\u4eca\\u5ea6\\u3068\\u3082\\u66f4\\u65b0\\u3057\\u3066\\u53c2\\u308a\\u307e\\u3059\\u306e\\u3067\\u3001<br/>\\u305d\\u3061\\u3089\\u3082\\u4f75\\u305b\\u3066\\u3001\\u3054\\u53c2\\u7167\\u304f\\u3060\\u3055\\u3044\\u307e\\u305b\\u3002</p><p>\\u5f15\\u304d\\u7d9a\\u304d\\u3001\\u3088\\u308d\\u3057\\u304f\\u304a\\u9858\\u3044\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002</p>\", \"author\": null, \"tagged_items\": [{\"pk\": null, \"tag\": 7, \"content_object\": 12}], \"gallery_images\": [], \"categories\": []}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 60,
+  "fields": {
+    "page": 14,
+    "submitted_for_moderation": false,
+    "created_at": "2019-09-03T09:30:03.604Z",
+    "user": [
+      "yyamashita"
+    ],
+    "content_json": "{\"pk\": 14, \"path\": \"0001000200040002\", \"depth\": 4, \"numchild\": 0, \"title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"draft_title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"slug\": \"\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"content_type\": 10, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/news/\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-09-03T09:28:56.169Z\", \"last_published_at\": \"2019-09-03T09:28:56.169Z\", \"latest_revision_created_at\": \"2019-09-03T09:28:56.125Z\", \"live_revision\": 58, \"date\": \"2019-09-03\", \"intro\": \"\\u3053\\u306e\\u5ea6 mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\\u3053\\u3068\\u3092\\u304a\\u77e5\\u3089\\u305b\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002\", \"body\": \"<p>\\u3053\\u3093\\u306b\\u3061\\u306f\\u3002</p><p>\\u3053\\u306e\\u5ea6\\u3001mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u3068\\u306a\\u308b\\u300c<a id=\\\"11\\\" linktype=\\\"page\\\">demo#01</a>\\u300d\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\\u3002</p><p></p><embed alt=\\\"mosquitone_demo1.jpg\\\" embedtype=\\\"image\\\" format=\\\"left\\\" id=\\\"19\\\"/><p></p><p><a href=\\\"https://mosquitone.bandcamp.com/album/demo-01\\\">bandcamp</a> \\u3067\\u306e\\u97f3\\u6e90\\u8996\\u8074\\u306e\\u4ed6\\u3001<a href=\\\"https://www.youtube.com/channel/UCkGHjxTGURpNC6kCpwscKyg?view_as=subscriber\\\">Youtube \\u516c\\u5f0f\\u30c1\\u30e3\\u30f3\\u30cd\\u30eb</a> \\u3067\\u3001\\u672c\\u97f3\\u6e90\\u53ce\\u9332\\u306e\\u69d8\\u5b50\\u3092 <a href=\\\"https://youtu.be/IDVYa-05hgM\\\">My sadness MV\\u98a8\\u30d3\\u30c7\\u30aa</a> \\u3067\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059\\uff01(\\u30a8\\u30e2\\u3044\\u306a\\u3041\\uff01)</p><p>\\u5f15\\u304d\\u7d9a\\u304d\\u3088\\u308d\\u3057\\u304f\\u304a\\u9858\\u3044\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002</p>\", \"author\": null, \"tagged_items\": [{\"pk\": null, \"tag\": 6, \"content_object\": 14}], \"gallery_images\": [{\"pk\": 1, \"sort_order\": 0, \"page\": 14, \"image\": 19, \"caption\": \"\"}], \"categories\": []}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 61,
+  "fields": {
+    "page": 14,
+    "submitted_for_moderation": false,
+    "created_at": "2019-09-03T09:33:52.853Z",
+    "user": [
+      "yyamashita"
+    ],
+    "content_json": "{\"pk\": 14, \"path\": \"0001000200040002\", \"depth\": 4, \"numchild\": 0, \"title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"draft_title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"slug\": \"\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"content_type\": 10, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/news/\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-09-03T09:28:56.169Z\", \"last_published_at\": \"2019-09-03T09:30:03.658Z\", \"latest_revision_created_at\": \"2019-09-03T09:30:03.604Z\", \"live_revision\": 60, \"date\": \"2019-09-03\", \"intro\": \"\\u3053\\u306e\\u5ea6 mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\\u3053\\u3068\\u3092\\u304a\\u77e5\\u3089\\u305b\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002\", \"body\": \"<p>\\u3053\\u3093\\u306b\\u3061\\u306f\\u3002</p><p>\\u3053\\u306e\\u5ea6\\u3001mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u3068\\u306a\\u308b\\u300c<a id=\\\"11\\\" linktype=\\\"page\\\">demo#01</a>\\u300d\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\\u3002</p><p></p><embed alt=\\\"mosquitone_demo1.jpg\\\" embedtype=\\\"image\\\" format=\\\"left\\\" id=\\\"19\\\"/><p></p><p><a href=\\\"https://mosquitone.bandcamp.com/album/demo-01\\\">bandcamp</a> \\u3067\\u306e\\u97f3\\u6e90\\u8996\\u8074\\u306e\\u4ed6\\u3001<a href=\\\"https://www.youtube.com/channel/UCkGHjxTGURpNC6kCpwscKyg?view_as=subscriber\\\">Youtube \\u516c\\u5f0f\\u30c1\\u30e3\\u30f3\\u30cd\\u30eb</a> \\u3067\\u3001\\u672c\\u97f3\\u6e90\\u53ce\\u9332\\u306e\\u69d8\\u5b50\\u3092 <a href=\\\"https://youtu.be/IDVYa-05hgM\\\">My sadness MV\\u98a8\\u30d3\\u30c7\\u30aa</a> \\u3067\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059\\uff01(\\u30a8\\u30e2\\u3044\\u306a\\u3041\\uff01)</p><embed embedtype=\\\"media\\\" url=\\\"https://youtu.be/IDVYa-05hgM\\\"/><p></p><p>\\u97f3\\u6e90\\u8a73\\u7d30\\u306f<a id=\\\"11\\\" linktype=\\\"page\\\">\\u30b3\\u30c1\\u30e9</a></p><p>\\u5f15\\u304d\\u7d9a\\u304d\\u3088\\u308d\\u3057\\u304f\\u304a\\u9858\\u3044\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002</p>\", \"author\": null, \"tagged_items\": [{\"pk\": null, \"tag\": 6, \"content_object\": 14}], \"gallery_images\": [{\"pk\": 1, \"sort_order\": 0, \"page\": 14, \"image\": 19, \"caption\": \"\"}], \"categories\": []}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 62,
+  "fields": {
+    "page": 14,
+    "submitted_for_moderation": false,
+    "created_at": "2019-09-03T09:42:59.579Z",
+    "user": [
+      "yyamashita"
+    ],
+    "content_json": "{\"pk\": 14, \"path\": \"0001000200040002\", \"depth\": 4, \"numchild\": 0, \"title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"draft_title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"slug\": \"\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"content_type\": 10, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/news/\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-09-03T09:28:56.169Z\", \"last_published_at\": \"2019-09-03T09:33:52.927Z\", \"latest_revision_created_at\": \"2019-09-03T09:33:52.853Z\", \"live_revision\": 61, \"date\": \"2019-09-03\", \"intro\": \"\\u3053\\u306e\\u5ea6 mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\\u3053\\u3068\\u3092\\u304a\\u77e5\\u3089\\u305b\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002\", \"body\": \"<p>\\u3053\\u3093\\u306b\\u3061\\u306f\\u3002</p><p>\\u3053\\u306e\\u5ea6\\u3001mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u3068\\u306a\\u308b\\u300c<a id=\\\"11\\\" linktype=\\\"page\\\">demo#01</a>\\u300d\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\\u3002</p><p></p><embed alt=\\\"mosquitone_demo1.jpg\\\" embedtype=\\\"image\\\" format=\\\"left\\\" id=\\\"19\\\"/><p><a id=\\\"11\\\" linktype=\\\"page\\\">\\u30b3\\u30c1\\u30e9</a>\\u304b\\u3089 \\u97f3\\u6e90\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059\\u3002\\u662f\\u975e\\u3054\\u8996\\u8074\\u304f\\u3060\\u3055\\u3044\\u3002</p><p>\\u307e\\u305f\\u3001<a href=\\\"https://www.youtube.com/channel/UCkGHjxTGURpNC6kCpwscKyg?view_as=subscriber\\\">Youtube \\u516c\\u5f0f\\u30c1\\u30e3\\u30f3\\u30cd\\u30eb</a> \\u3067\\u3001\\u672c\\u97f3\\u6e90\\u53ce\\u9332\\u306e\\u69d8\\u5b50\\u3092 <a href=\\\"https://youtu.be/IDVYa-05hgM\\\">My sadness MV\\u98a8\\u30d3\\u30c7\\u30aa</a> \\u306b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\\u3002(\\u30a8\\u30e2\\u3044\\u306a\\u3041\\uff01)<br/>\\u662f\\u975e\\u3001\\u4f75\\u305b\\u3066\\u3053\\u3061\\u3089\\u3082\\u3054\\u8996\\u8074\\u304f\\u3060\\u3055\\u3044\\u307e\\u305b\\u3002</p><embed embedtype=\\\"media\\\" url=\\\"https://youtu.be/IDVYa-05hgM\\\"/><p></p><p>\\u4ee5\\u4e0a\\u3067\\u3059\\u3001\\u5f15\\u304d\\u7d9a\\u304d\\u3088\\u308d\\u3057\\u304f\\u304a\\u9858\\u3044\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002</p>\", \"author\": null, \"tagged_items\": [{\"pk\": null, \"tag\": 6, \"content_object\": 14}], \"gallery_images\": [{\"pk\": 1, \"sort_order\": 0, \"page\": 14, \"image\": 19, \"caption\": \"\"}], \"categories\": []}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 63,
+  "fields": {
+    "page": 14,
+    "submitted_for_moderation": false,
+    "created_at": "2019-09-03T09:44:57.712Z",
+    "user": [
+      "yyamashita"
+    ],
+    "content_json": "{\"pk\": 14, \"path\": \"0001000200040002\", \"depth\": 4, \"numchild\": 0, \"title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"draft_title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"slug\": \"\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"content_type\": 10, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/news/\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-09-03T09:28:56.169Z\", \"last_published_at\": \"2019-09-03T09:42:59.624Z\", \"latest_revision_created_at\": \"2019-09-03T09:42:59.579Z\", \"live_revision\": 62, \"date\": \"2019-09-03\", \"intro\": \"\\u3053\\u306e\\u5ea6 mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\\u3053\\u3068\\u3092\\u304a\\u77e5\\u3089\\u305b\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002\", \"body\": \"<p>\\u3053\\u3093\\u306b\\u3061\\u306f\\u3002mosquitone \\u3067\\u3059\\u3002</p><p>\\u3053\\u306e\\u5ea6\\u3001mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u3068\\u306a\\u308b\\u300c<a id=\\\"11\\\" linktype=\\\"page\\\">demo#01</a>\\u300d\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\\u3002</p><p><a id=\\\"11\\\" linktype=\\\"page\\\">\\u672c\\u30b5\\u30a4\\u30c8\\u300cmusic\\u300d\\u30da\\u30fc\\u30b8</a>\\u3067 \\u672c\\u97f3\\u6e90\\u3092\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059\\u3002<br/>\\u662f\\u975e\\u3054\\u8996\\u8074\\u304f\\u3060\\u3055\\u3044\\uff01</p><p></p><embed alt=\\\"mosquitone_demo1.jpg\\\" embedtype=\\\"image\\\" format=\\\"left\\\" id=\\\"19\\\"/><p>\\u307e\\u305f\\u3001<a href=\\\"https://www.youtube.com/channel/UCkGHjxTGURpNC6kCpwscKyg?view_as=subscriber\\\">Youtube \\u516c\\u5f0f\\u30c1\\u30e3\\u30f3\\u30cd\\u30eb</a> \\u3067\\u3001 <a href=\\\"https://youtu.be/IDVYa-05hgM\\\">My sadness MV\\u98a8\\u30d3\\u30c7\\u30aa</a> \\u3068\\u3057\\u3066\\u672c\\u97f3\\u6e90\\u53ce\\u9332\\u306e\\u69d8\\u5b50\\u3092\\u3054\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059\\uff01(\\u30a8\\u30e2\\u3044\\u306a\\u3041\\uff01)<br/>\\u662f\\u975e\\u3001\\u4f75\\u305b\\u3066\\u3053\\u3061\\u3089\\u3082\\u3054\\u8996\\u8074\\u304f\\u3060\\u3055\\u3044\\u307e\\u305b\\u3002</p><embed embedtype=\\\"media\\\" url=\\\"https://youtu.be/IDVYa-05hgM\\\"/><p></p><p>\\u4ee5\\u4e0a\\u3067\\u3059\\u3001\\u5f15\\u304d\\u7d9a\\u304d\\u3088\\u308d\\u3057\\u304f\\u304a\\u9858\\u3044\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002</p>\", \"author\": null, \"tagged_items\": [{\"pk\": null, \"tag\": 6, \"content_object\": 14}], \"gallery_images\": [{\"pk\": 1, \"sort_order\": 0, \"page\": 14, \"image\": 19, \"caption\": \"\"}], \"categories\": []}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 64,
+  "fields": {
+    "page": 14,
+    "submitted_for_moderation": false,
+    "created_at": "2019-09-03T09:46:15.702Z",
+    "user": [
+      "yyamashita"
+    ],
+    "content_json": "{\"pk\": 14, \"path\": \"0001000200040002\", \"depth\": 4, \"numchild\": 0, \"title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"draft_title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"slug\": \"\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"content_type\": 10, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/news/\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-09-03T09:28:56.169Z\", \"last_published_at\": \"2019-09-03T09:44:57.762Z\", \"latest_revision_created_at\": \"2019-09-03T09:44:57.712Z\", \"live_revision\": 63, \"date\": \"2019-09-03\", \"intro\": \"\\u3053\\u306e\\u5ea6 mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\\u3053\\u3068\\u3092\\u304a\\u77e5\\u3089\\u305b\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002\", \"body\": \"<p>\\u3053\\u3093\\u306b\\u3061\\u306f\\u3002mosquitone \\u3067\\u3059\\u3002</p><p>\\u3053\\u306e\\u5ea6\\u3001mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u3068\\u306a\\u308b\\u300c<a id=\\\"11\\\" linktype=\\\"page\\\">demo#01</a>\\u300d\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\\u3002</p><p><a id=\\\"11\\\" linktype=\\\"page\\\">\\u672c\\u30b5\\u30a4\\u30c8\\u300cmusic\\u300d\\u30da\\u30fc\\u30b8</a>\\u3067 \\u672c\\u97f3\\u6e90\\u3092\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059\\u3002<br/>\\u662f\\u975e\\u3054\\u8996\\u8074\\u304f\\u3060\\u3055\\u3044\\uff01</p><embed alt=\\\"mosquitone_demo1.jpg\\\" embedtype=\\\"image\\\" format=\\\"left\\\" id=\\\"19\\\"/><p></p><p>\\u307e\\u305f\\u3001<a href=\\\"https://www.youtube.com/channel/UCkGHjxTGURpNC6kCpwscKyg?view_as=subscriber\\\">Youtube \\u516c\\u5f0f\\u30c1\\u30e3\\u30f3\\u30cd\\u30eb</a> \\u3067\\u3001 <a href=\\\"https://youtu.be/IDVYa-05hgM\\\">My sadness MV\\u98a8\\u30d3\\u30c7\\u30aa</a> \\u3068\\u3057\\u3066\\u3001\\u672c\\u97f3\\u6e90\\u53ce\\u9332\\u306e\\u69d8\\u5b50\\u3092\\u3054\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059\\uff01(\\u30a8\\u30e2\\u3044\\u306a\\u3041\\uff01)</p><p><br/>\\u662f\\u975e\\u3001\\u4f75\\u305b\\u3066\\u3053\\u3061\\u3089\\u3082\\u3054\\u8996\\u8074\\u304f\\u3060\\u3055\\u3044\\u307e\\u305b\\u3002</p><embed embedtype=\\\"media\\\" url=\\\"https://youtu.be/IDVYa-05hgM\\\"/><p></p><p>\\u4ee5\\u4e0a\\u3067\\u3059\\u3001\\u5f15\\u304d\\u7d9a\\u304d\\u3088\\u308d\\u3057\\u304f\\u304a\\u9858\\u3044\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002</p><p></p>\", \"author\": null, \"tagged_items\": [{\"pk\": null, \"tag\": 6, \"content_object\": 14}], \"gallery_images\": [{\"pk\": 1, \"sort_order\": 0, \"page\": 14, \"image\": 19, \"caption\": \"\"}], \"categories\": []}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 65,
+  "fields": {
+    "page": 12,
+    "submitted_for_moderation": false,
+    "created_at": "2019-09-03T09:50:31.013Z",
+    "user": [
+      "yyamashita"
+    ],
+    "content_json": "{\"pk\": 12, \"path\": \"0001000200040001\", \"depth\": 4, \"numchild\": 0, \"title\": \"mosquitone \\u516c\\u5f0f\\u30b5\\u30a4\\u30c8\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\", \"draft_title\": \"mosquitone \\u516c\\u5f0f\\u30b5\\u30a4\\u30c8\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\", \"slug\": \"mosquitone-\\u516c\\u5f0f\\u30b5\\u30a4\\u30c8\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\", \"content_type\": 10, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/news/mosquitone-\\u516c\\u5f0f\\u30b5\\u30a4\\u30c8\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-08-09T17:57:22.638Z\", \"last_published_at\": \"2019-09-03T09:29:22.238Z\", \"latest_revision_created_at\": \"2019-09-03T09:29:22.191Z\", \"live_revision\": 59, \"date\": \"2019-09-02\", \"intro\": \"\\u3053\\u306e\\u5ea6 mosquitone \\u304c\\u516c\\u5f0f\\u30b5\\u30a4\\u30c8\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\\u3053\\u3068\\u3092\\u304a\\u77e5\\u3089\\u305b\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002\", \"body\": \"<p>\\u3053\\u306e\\u5ea6 mosquitone \\u304c <a id=\\\"3\\\" linktype=\\\"page\\\">\\u516c\\u5f0f\\u30b5\\u30a4\\u30c8</a> \\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\\u3002</p><p>\\u3053\\u306e\\u30b5\\u30a4\\u30c8\\u306f <a id=\\\"9\\\" linktype=\\\"page\\\">\\u30e9\\u30a4\\u30d6\\u60c5\\u5831</a> \\u3084 <a id=\\\"6\\\" linktype=\\\"page\\\">\\u97f3\\u6e90</a> \\u306a\\u3069\\u3001mosquitone \\u306e\\u69d8\\u3005\\u306a\\u6d3b\\u52d5\\u30fb\\u60c5\\u5831\\u3092\\u767a\\u4fe1\\u3059\\u308b\\u30dd\\u30fc\\u30bf\\u30eb\\u3067\\u3059\\u3002</p><p>\\u4eca\\u307e\\u3067\\u60c5\\u5831\\u3092\\u767a\\u4fe1\\u3057\\u3066\\u304d\\u307e\\u3057\\u305f <a id=\\\"5\\\" linktype=\\\"page\\\">SNS</a> \\b\\u3082\\u3001\\u4eca\\u5ea6\\u3068\\u3082\\u66f4\\u65b0\\u3057\\u3066\\u53c2\\u308a\\u307e\\u3059\\u306e\\u3067\\u3001<br/>\\u305d\\u3061\\u3089\\u3082\\u4f75\\u305b\\u3066\\u3001\\u3054\\u53c2\\u7167\\u304f\\u3060\\u3055\\u3044\\u307e\\u305b\\u3002</p><p>\\u5f15\\u304d\\u7d9a\\u304d\\u3001\\u3088\\u308d\\u3057\\u304f\\u304a\\u9858\\u3044\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002</p>\", \"author\": null, \"tagged_items\": [{\"pk\": null, \"tag\": 7, \"content_object\": 12}], \"gallery_images\": [{\"pk\": null, \"sort_order\": 0, \"page\": 12, \"image\": 22, \"caption\": \"\"}], \"categories\": []}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 66,
+  "fields": {
+    "page": 14,
+    "submitted_for_moderation": false,
+    "created_at": "2019-09-03T09:51:20.572Z",
+    "user": [
+      "yyamashita"
+    ],
+    "content_json": "{\"pk\": 14, \"path\": \"0001000200040002\", \"depth\": 4, \"numchild\": 0, \"title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\", \"draft_title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"slug\": \"\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"content_type\": 10, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/news/\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-09-03T09:28:56.169Z\", \"last_published_at\": \"2019-09-03T09:46:15.770Z\", \"latest_revision_created_at\": \"2019-09-03T09:46:15.702Z\", \"live_revision\": 64, \"date\": \"2019-09-03\", \"intro\": \"\\u3053\\u306e\\u5ea6 mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\\u3053\\u3068\\u3092\\u304a\\u77e5\\u3089\\u305b\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002\", \"body\": \"<p>\\u3053\\u3093\\u306b\\u3061\\u306f\\u3002mosquitone \\u3067\\u3059\\u3002</p><p>\\u3053\\u306e\\u5ea6\\u3001mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u3068\\u306a\\u308b\\u300c<a id=\\\"11\\\" linktype=\\\"page\\\">demo#01</a>\\u300d\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\\u3002</p><p><a id=\\\"11\\\" linktype=\\\"page\\\">\\u672c\\u30b5\\u30a4\\u30c8\\u300cmusic\\u300d\\u30da\\u30fc\\u30b8</a>\\u3067 \\u672c\\u97f3\\u6e90\\u3092\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059\\u3002<br/>\\u662f\\u975e\\u3054\\u8996\\u8074\\u304f\\u3060\\u3055\\u3044\\uff01</p><embed alt=\\\"mosquitone_demo1.jpg\\\" embedtype=\\\"image\\\" format=\\\"left\\\" id=\\\"19\\\"/><p></p><p>\\u307e\\u305f\\u3001<a href=\\\"https://www.youtube.com/channel/UCkGHjxTGURpNC6kCpwscKyg?view_as=subscriber\\\">Youtube \\u516c\\u5f0f\\u30c1\\u30e3\\u30f3\\u30cd\\u30eb</a> \\u3067\\u3001 <a href=\\\"https://youtu.be/IDVYa-05hgM\\\">My sadness MV\\u98a8\\u30d3\\u30c7\\u30aa</a> \\u3068\\u3057\\u3066\\u3001\\u672c\\u97f3\\u6e90\\u53ce\\u9332\\u306e\\u69d8\\u5b50\\u3092\\u3054\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059\\uff01(\\u30a8\\u30e2\\u3044\\u306a\\u3041\\uff01)</p><p><br/>\\u662f\\u975e\\u3001\\u4f75\\u305b\\u3066\\u3053\\u3061\\u3089\\u3082\\u3054\\u8996\\u8074\\u304f\\u3060\\u3055\\u3044\\u307e\\u305b\\u3002</p><embed embedtype=\\\"media\\\" url=\\\"https://youtu.be/IDVYa-05hgM\\\"/><p></p><p>\\u4eca\\u5f8c\\u3068\\u3082 mosquitone \\u3092\\u5f15\\u304d\\u7d9a\\u304d\\u3088\\u308d\\u3057\\u304f\\u304a\\u9858\\u3044\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002</p><p></p>\", \"author\": null, \"tagged_items\": [{\"pk\": null, \"tag\": 6, \"content_object\": 14}], \"gallery_images\": [{\"pk\": 1, \"sort_order\": 0, \"page\": 14, \"image\": 19, \"caption\": \"\"}], \"categories\": []}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 67,
+  "fields": {
+    "page": 14,
+    "submitted_for_moderation": false,
+    "created_at": "2019-09-03T09:55:28.981Z",
+    "user": [
+      "yyamashita"
+    ],
+    "content_json": "{\"pk\": 14, \"path\": \"0001000200040002\", \"depth\": 4, \"numchild\": 0, \"title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\", \"draft_title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\", \"slug\": \"\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"content_type\": 10, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/news/\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-09-03T09:28:56.169Z\", \"last_published_at\": \"2019-09-03T09:51:20.622Z\", \"latest_revision_created_at\": \"2019-09-03T09:51:20.572Z\", \"live_revision\": 66, \"date\": \"2019-09-03\", \"intro\": \"\\u3053\\u306e\\u5ea6 mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\\u3053\\u3068\\u3092\\u304a\\u77e5\\u3089\\u305b\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002\", \"body\": \"<p>\\u3053\\u3093\\u306b\\u3061\\u306f\\u3002mosquitone \\u3067\\u3059\\u3002</p><p>\\u3053\\u306e\\u5ea6\\u3001mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u3068\\u306a\\u308b\\u300c<a id=\\\"11\\\" linktype=\\\"page\\\">demo#01</a>\\u300d\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\\u3002</p><p><a id=\\\"11\\\" linktype=\\\"page\\\">\\u672c\\u30b5\\u30a4\\u30c8\\u300cmusic\\u300d\\u30da\\u30fc\\u30b8</a>\\u3067 \\u672c\\u97f3\\u6e90\\u3092\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059\\u3002<br/>\\u662f\\u975e\\u3054\\u8996\\u8074\\u304f\\u3060\\u3055\\u3044\\uff01</p><p></p><embed alt=\\\"mosquitone_demo1.jpg\\\" embedtype=\\\"image\\\" format=\\\"fullwidth\\\" id=\\\"19\\\"/><p></p><p></p><p>\\u307e\\u305f\\u3001<a href=\\\"https://www.youtube.com/channel/UCkGHjxTGURpNC6kCpwscKyg?view_as=subscriber\\\">Youtube \\u516c\\u5f0f\\u30c1\\u30e3\\u30f3\\u30cd\\u30eb</a> \\u3067\\u3001 <a href=\\\"https://youtu.be/IDVYa-05hgM\\\">My sadness MV\\u98a8\\u30d3\\u30c7\\u30aa</a> \\u3068\\u3057\\u3066\\u3001\\u672c\\u97f3\\u6e90\\u53ce\\u9332\\u306e\\u69d8\\u5b50\\u3092\\u3054\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059\\uff01(\\u30a8\\u30e2\\u3044\\u306a\\u3041\\uff01)</p><p><br/>\\u662f\\u975e\\u3001\\u4f75\\u305b\\u3066\\u3053\\u3061\\u3089\\u3082\\u3054\\u8996\\u8074\\u304f\\u3060\\u3055\\u3044\\u307e\\u305b\\u3002</p><embed embedtype=\\\"media\\\" url=\\\"https://youtu.be/IDVYa-05hgM\\\"/><p></p><p>\\u4eca\\u5f8c\\u3068\\u3082 mosquitone \\u3092\\u5f15\\u304d\\u7d9a\\u304d\\u3088\\u308d\\u3057\\u304f\\u304a\\u9858\\u3044\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002</p><p></p>\", \"author\": null, \"tagged_items\": [{\"pk\": null, \"tag\": 6, \"content_object\": 14}], \"gallery_images\": [{\"pk\": 1, \"sort_order\": 0, \"page\": 14, \"image\": 19, \"caption\": \"\"}], \"categories\": []}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 68,
+  "fields": {
+    "page": 14,
+    "submitted_for_moderation": false,
+    "created_at": "2019-09-03T09:56:11.304Z",
+    "user": [
+      "yyamashita"
+    ],
+    "content_json": "{\"pk\": 14, \"path\": \"0001000200040002\", \"depth\": 4, \"numchild\": 0, \"title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\", \"draft_title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\", \"slug\": \"\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"content_type\": 10, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/news/\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-09-03T09:28:56.169Z\", \"last_published_at\": \"2019-09-03T09:55:29.022Z\", \"latest_revision_created_at\": \"2019-09-03T09:55:28.981Z\", \"live_revision\": 67, \"date\": \"2019-09-03\", \"intro\": \"\\u3053\\u306e\\u5ea6 mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\\u3053\\u3068\\u3092\\u304a\\u77e5\\u3089\\u305b\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002\", \"body\": \"<p>\\u3053\\u3093\\u306b\\u3061\\u306f\\u3002mosquitone \\u3067\\u3059\\u3002</p><p>\\u3053\\u306e\\u5ea6\\u3001mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u3068\\u306a\\u308b\\u300c<a id=\\\"11\\\" linktype=\\\"page\\\">demo#01</a>\\u300d\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\\u3002</p><p><a id=\\\"11\\\" linktype=\\\"page\\\">\\u672c\\u30b5\\u30a4\\u30c8\\u300cmusic\\u300d\\u30da\\u30fc\\u30b8</a>\\u3067 \\u672c\\u97f3\\u6e90\\u3092\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059\\u3002<br/>\\u662f\\u975e\\u3054\\u8996\\u8074\\u304f\\u3060\\u3055\\u3044\\uff01</p><p></p><embed alt=\\\"mosquitone_demo1.jpg\\\" embedtype=\\\"image\\\" format=\\\"left\\\" id=\\\"19\\\"/><p></p><p></p><p>\\u307e\\u305f\\u3001<a href=\\\"https://www.youtube.com/channel/UCkGHjxTGURpNC6kCpwscKyg?view_as=subscriber\\\">Youtube \\u516c\\u5f0f\\u30c1\\u30e3\\u30f3\\u30cd\\u30eb</a> \\u3067\\u3001 <a href=\\\"https://youtu.be/IDVYa-05hgM\\\">My sadness MV\\u98a8\\u30d3\\u30c7\\u30aa</a> \\u3068\\u3057\\u3066\\u3001\\u672c\\u97f3\\u6e90\\u53ce\\u9332\\u306e\\u69d8\\u5b50\\u3092\\u3054\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059\\uff01(\\u30a8\\u30e2\\u3044\\u306a\\u3041\\uff01)</p><p><br/>\\u662f\\u975e\\u3001\\u4f75\\u305b\\u3066\\u3053\\u3061\\u3089\\u3082\\u3054\\u8996\\u8074\\u304f\\u3060\\u3055\\u3044\\u307e\\u305b\\u3002</p><embed embedtype=\\\"media\\\" url=\\\"https://youtu.be/IDVYa-05hgM\\\"/><p></p><p>\\u4eca\\u5f8c\\u3068\\u3082 mosquitone \\u3092\\u5f15\\u304d\\u7d9a\\u304d\\u3088\\u308d\\u3057\\u304f\\u304a\\u9858\\u3044\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002</p><p></p>\", \"author\": null, \"tagged_items\": [{\"pk\": null, \"tag\": 6, \"content_object\": 14}], \"gallery_images\": [{\"pk\": 1, \"sort_order\": 0, \"page\": 14, \"image\": 19, \"caption\": \"\"}], \"categories\": []}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 69,
+  "fields": {
+    "page": 14,
+    "submitted_for_moderation": false,
+    "created_at": "2019-09-03T10:07:49.807Z",
+    "user": [
+      "yyamashita"
+    ],
+    "content_json": "{\"pk\": 14, \"path\": \"0001000200040002\", \"depth\": 4, \"numchild\": 0, \"title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\", \"draft_title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\", \"slug\": \"\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"content_type\": 10, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/news/\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-09-03T09:28:56.169Z\", \"last_published_at\": \"2019-09-03T09:56:11.343Z\", \"latest_revision_created_at\": \"2019-09-03T09:56:11.304Z\", \"live_revision\": 68, \"date\": \"2019-09-03\", \"intro\": \"\\u3053\\u306e\\u5ea6 mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\\u3053\\u3068\\u3092\\u304a\\u77e5\\u3089\\u305b\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002\", \"body\": \"<p>\\u3053\\u3093\\u306b\\u3061\\u306f\\u3002mosquitone \\u3067\\u3059\\u3002</p><p>\\u3053\\u306e\\u5ea6\\u3001mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u3068\\u306a\\u308b\\u300c<a id=\\\"11\\\" linktype=\\\"page\\\">demo#01</a>\\u300d\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\\u3002</p><p><a id=\\\"11\\\" linktype=\\\"page\\\">\\u672c\\u30b5\\u30a4\\u30c8\\u300cmusic\\u300d\\u30da\\u30fc\\u30b8</a>\\u3067 \\u672c\\u97f3\\u6e90\\u3092\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059\\u3002<br/>\\u662f\\u975e\\u3054\\u8996\\u8074\\u304f\\u3060\\u3055\\u3044\\uff01</p><p></p><embed alt=\\\"mosquitone_demo1.jpg\\\" embedtype=\\\"image\\\" format=\\\"left\\\" id=\\\"19\\\"/><p></p><p></p><p>\\u307e\\u305f\\u3001<a href=\\\"https://www.youtube.com/channel/UCkGHjxTGURpNC6kCpwscKyg?view_as=subscriber\\\">Youtube \\u516c\\u5f0f\\u30c1\\u30e3\\u30f3\\u30cd\\u30eb</a> \\u3067\\u3001 <a href=\\\"https://youtu.be/IDVYa-05hgM\\\">My sadness MV</a> \\u3068\\u3057\\u3066\\u3001\\u672c\\u97f3\\u6e90\\u53ce\\u9332\\u306e\\u69d8\\u5b50\\u3092\\u3054\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059\\uff01(\\u30a8\\u30e2\\u3044\\u306a\\u3041\\uff01)</p><p><br/>\\u662f\\u975e\\u3001\\u4f75\\u305b\\u3066\\u3053\\u3061\\u3089\\u3082\\u3054\\u8996\\u8074\\u304f\\u3060\\u3055\\u3044\\u307e\\u305b\\u3002</p><embed embedtype=\\\"media\\\" url=\\\"https://youtu.be/IDVYa-05hgM\\\"/><p></p><p>\\u4eca\\u5f8c\\u3068\\u3082 mosquitone \\u3092\\u5f15\\u304d\\u7d9a\\u304d\\u3088\\u308d\\u3057\\u304f\\u304a\\u9858\\u3044\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002</p><p></p>\", \"author\": null, \"tagged_items\": [{\"pk\": null, \"tag\": 6, \"content_object\": 14}], \"gallery_images\": [{\"pk\": 1, \"sort_order\": 0, \"page\": 14, \"image\": 19, \"caption\": \"\"}], \"categories\": []}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 70,
+  "fields": {
+    "page": 14,
+    "submitted_for_moderation": false,
+    "created_at": "2019-09-03T10:11:19.363Z",
+    "user": [
+      "yyamashita"
+    ],
+    "content_json": "{\"pk\": 14, \"path\": \"0001000200040002\", \"depth\": 4, \"numchild\": 0, \"title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\", \"draft_title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\", \"slug\": \"\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"content_type\": 10, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/news/\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-09-03T09:28:56.169Z\", \"last_published_at\": \"2019-09-03T10:07:49.849Z\", \"latest_revision_created_at\": \"2019-09-03T10:07:49.807Z\", \"live_revision\": 69, \"date\": \"2019-09-03\", \"intro\": \"\\u3053\\u306e\\u5ea6 mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\\u3053\\u3068\\u3092\\u304a\\u77e5\\u3089\\u305b\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002\", \"body\": \"<p>\\u3053\\u3093\\u306b\\u3061\\u306f\\u3002mosquitone \\u3067\\u3059\\u3002</p><p>\\u3053\\u306e\\u5ea6\\u3001mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u3068\\u306a\\u308b\\u300c<a id=\\\"11\\\" linktype=\\\"page\\\">demo#01</a>\\u300d\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\\u3002</p><p><a id=\\\"11\\\" linktype=\\\"page\\\">\\u672c\\u30b5\\u30a4\\u30c8\\u300cmusic\\u300d\\u30da\\u30fc\\u30b8</a>\\u3067 \\u672c\\u97f3\\u6e90\\u3092\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059\\u3002<br/>\\u662f\\u975e\\u3054\\u8996\\u8074\\u304f\\u3060\\u3055\\u3044\\uff01</p><p></p><embed alt=\\\"mosquitone_demo1.jpg\\\" embedtype=\\\"image\\\" format=\\\"left\\\" id=\\\"19\\\"/><p></p><p></p><p>\\u307e\\u305f\\u3001<a href=\\\"https://www.youtube.com/channel/UCkGHjxTGURpNC6kCpwscKyg?view_as=subscriber\\\">Youtube \\u516c\\u5f0f\\u30c1\\u30e3\\u30f3\\u30cd\\u30eb</a> \\u3067\\u3001 <a href=\\\"https://youtu.be/IDVYa-05hgM\\\">My sadness MV</a> \\u3068\\u3057\\u3066\\u3001\\u672c\\u97f3\\u6e90\\u53ce\\u9332\\u306e\\u69d8\\u5b50\\u3092\\u3054\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059\\uff01(\\u30a8\\u30e2\\u3044\\u306a\\u3041\\uff01)</p><p><br/>\\u662f\\u975e\\u3001\\u4f75\\u305b\\u3066\\u3053\\u3061\\u3089\\u3082\\u3054\\u8996\\u8074\\u304f\\u3060\\u3055\\u3044\\u307e\\u305b\\u3002</p><embed embedtype=\\\"media\\\" url=\\\"https://youtu.be/IDVYa-05hgM\\\"/><p></p><p>\\u4eca\\u5f8c\\u3068\\u3082 mosquitone \\u3092\\u5f15\\u304d\\u7d9a\\u304d\\u3088\\u308d\\u3057\\u304f\\u304a\\u9858\\u3044\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002</p><p></p>\", \"author\": null, \"tagged_items\": [{\"pk\": null, \"tag\": 6, \"content_object\": 14}], \"gallery_images\": [{\"pk\": 1, \"sort_order\": 0, \"page\": 14, \"image\": 19, \"caption\": \"\"}], \"categories\": []}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 71,
+  "fields": {
+    "page": 14,
+    "submitted_for_moderation": false,
+    "created_at": "2019-09-03T10:11:26.394Z",
+    "user": [
+      "yyamashita"
+    ],
+    "content_json": "{\"pk\": 14, \"path\": \"0001000200040002\", \"depth\": 4, \"numchild\": 0, \"title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\", \"draft_title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\", \"slug\": \"\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"content_type\": 10, \"live\": true, \"has_unpublished_changes\": true, \"url_path\": \"/home/news/\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-09-03T09:28:56.169Z\", \"last_published_at\": \"2019-09-03T10:07:49.849Z\", \"latest_revision_created_at\": \"2019-09-03T10:11:19.363Z\", \"live_revision\": 69, \"date\": \"2019-09-03\", \"intro\": \"\\u3053\\u306e\\u5ea6 mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\\u3053\\u3068\\u3092\\u304a\\u77e5\\u3089\\u305b\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002\", \"body\": \"<p>\\u3053\\u3093\\u306b\\u3061\\u306f\\u3002mosquitone \\u3067\\u3059\\u3002</p><p>\\u3053\\u306e\\u5ea6\\u3001mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u3068\\u306a\\u308b\\u300c<a id=\\\"11\\\" linktype=\\\"page\\\">demo#01</a>\\u300d\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\\u3002</p><p><a id=\\\"11\\\" linktype=\\\"page\\\">\\u672c\\u30b5\\u30a4\\u30c8\\u300cmusic\\u300d\\u30da\\u30fc\\u30b8</a>\\u3067 \\u672c\\u97f3\\u6e90\\u3092\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059\\u3002<br/>\\u662f\\u975e\\u3054\\u8996\\u8074\\u304f\\u3060\\u3055\\u3044\\uff01</p><p></p><embed alt=\\\"mosquitone_demo1.jpg\\\" embedtype=\\\"image\\\" format=\\\"left\\\" id=\\\"19\\\"/><p></p><p></p><p>\\u307e\\u305f\\u3001<a href=\\\"https://www.youtube.com/channel/UCkGHjxTGURpNC6kCpwscKyg?view_as=subscriber\\\">Youtube \\u516c\\u5f0f\\u30c1\\u30e3\\u30f3\\u30cd\\u30eb</a> \\u3067\\u3001 <a href=\\\"https://youtu.be/IDVYa-05hgM\\\">My sadness MV</a> \\u3068\\u3057\\u3066\\u3001\\u672c\\u97f3\\u6e90\\u53ce\\u9332\\u306e\\u69d8\\u5b50\\u3092\\u3054\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059\\uff01(\\u30a8\\u30e2\\u3044\\u306a\\u3041\\uff01)</p><p><br/>\\u662f\\u975e\\u3001\\u4f75\\u305b\\u3066\\u3053\\u3061\\u3089\\u3082\\u3054\\u8996\\u8074\\u304f\\u3060\\u3055\\u3044\\u307e\\u305b\\u3002</p><embed embedtype=\\\"media\\\" url=\\\"https://youtu.be/IDVYa-05hgM\\\"/><p></p><p>\\u4eca\\u5f8c\\u3068\\u3082 mosquitone \\u3092\\u5f15\\u304d\\u7d9a\\u304d\\u3088\\u308d\\u3057\\u304f\\u304a\\u9858\\u3044\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002</p><p></p>\", \"author\": null, \"tagged_items\": [{\"pk\": null, \"tag\": 6, \"content_object\": 14}], \"gallery_images\": [{\"pk\": 1, \"sort_order\": 0, \"page\": null, \"image\": 19, \"caption\": \"\"}], \"categories\": []}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 72,
+  "fields": {
+    "page": 11,
+    "submitted_for_moderation": false,
+    "created_at": "2019-09-03T10:13:04.418Z",
+    "user": [
+      "yyamashita"
+    ],
+    "content_json": "{\"pk\": 11, \"path\": \"0001000200030001\", \"depth\": 4, \"numchild\": 0, \"title\": \"Demo#1\", \"draft_title\": \"Demo#1\", \"slug\": \"demo1\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/music/demo1/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-08-09T17:51:33.847Z\", \"last_published_at\": \"2019-09-03T03:36:13.895Z\", \"latest_revision_created_at\": \"2019-09-03T03:36:13.844Z\", \"live_revision\": 56, \"release_date\": \"2019-09-01\", \"copy\": \"First demo\", \"description\": \"<p>mosquitone \\u3068\\u3057\\u3066\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u3067\\u3059\\u3002<br/>\\u540c\\u3058\\u304f mosquitone \\u3068\\u3057\\u3066\\u6700\\u521d\\u306e\\u30aa\\u30ea\\u30b8\\u30ca\\u30eb\\u697d\\u66f2\\u300cKeep going forward\\u300d,\\u300cMy sadness \\u300d\\u306e\\uff12\\u66f2\\u3092\\u53ce\\u9332\\u3002<br/><a href=\\\"http://mosquitone.bandcamp.com/album/demo-01\\\">bandcamp</a> \\u3067\\u30a2\\u30eb\\u30d0\\u30e0\\u8996\\u8074\\uff06\\u30c0\\u30a6\\u30f3\\u30ed\\u30fc\\u30c9\\u306e\\u4ed6\\u3001youtube \\u3067\\u30ec\\u30b3\\u30fc\\u30c7\\u30a3\\u30f3\\u30b0\\u98a8\\u666f\\u3092\\u53ce\\u3081\\u305f<a href=\\\"https://youtu.be/IDVYa-05hgM\\\">\\u300cMy sadness\\u300dMV</a>\\u3092\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059!</p>\", \"artwork\": 19, \"bandcamp_album_url\": \"http://mosquitone.bandcamp.com/album/demo-01\", \"bandcamp_player_url\": \"https://bandcamp.com/EmbeddedPlayer/album=3118256726/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/tracklist=true/transparent=true/\", \"youtube_url\": \"https://youtu.be/IDVYa-05hgM\", \"tracks\": [{\"pk\": 1, \"sort_order\": 0, \"page\": 11, \"title\": \"My sadness\", \"duration\": \"00:04:00\"}, {\"pk\": 2, \"sort_order\": 1, \"page\": 11, \"title\": \"Keep going forward\", \"duration\": \"00:03:50\"}]}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 73,
+  "fields": {
+    "page": 14,
+    "submitted_for_moderation": false,
+    "created_at": "2019-09-03T10:16:39.459Z",
+    "user": [
+      "yyamashita"
+    ],
+    "content_json": "{\"pk\": 14, \"path\": \"0001000200040002\", \"depth\": 4, \"numchild\": 0, \"title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\", \"draft_title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\", \"slug\": \"\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"content_type\": 10, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/news/\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-09-03T09:28:56.169Z\", \"last_published_at\": \"2019-09-03T10:11:26.427Z\", \"latest_revision_created_at\": \"2019-09-03T10:11:26.394Z\", \"live_revision\": 71, \"date\": \"2019-09-03\", \"intro\": \"\\u3053\\u306e\\u5ea6 mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\\u3053\\u3068\\u3092\\u304a\\u77e5\\u3089\\u305b\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002\", \"body\": \"<p>\\u3053\\u3093\\u306b\\u3061\\u306f\\u3002mosquitone \\u3067\\u3059\\u3002</p><p>\\u3053\\u306e\\u5ea6\\u3001mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u3068\\u306a\\u308b\\u300c<a id=\\\"11\\\" linktype=\\\"page\\\">demo#01</a>\\u300d\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\\u3002</p><p><a id=\\\"11\\\" linktype=\\\"page\\\">\\u672c\\u30b5\\u30a4\\u30c8\\u300cmusic\\u300d\\u30da\\u30fc\\u30b8</a>\\u3067 \\u672c\\u97f3\\u6e90\\u3092\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059\\u3002<br/>\\u662f\\u975e\\u3054\\u8996\\u8074\\u304f\\u3060\\u3055\\u3044\\uff01</p><p></p><embed alt=\\\"demo-artwork-mini.png\\\" embedtype=\\\"image\\\" format=\\\"fullwidth\\\" id=\\\"24\\\"/><p></p><p>\\u307e\\u305f\\u3001<a href=\\\"https://www.youtube.com/channel/UCkGHjxTGURpNC6kCpwscKyg?view_as=subscriber\\\">Youtube \\u516c\\u5f0f\\u30c1\\u30e3\\u30f3\\u30cd\\u30eb</a> \\u3067\\u3001 <a href=\\\"https://youtu.be/IDVYa-05hgM\\\">My sadness MV</a> \\u3068\\u3057\\u3066\\u3001\\u672c\\u97f3\\u6e90\\u53ce\\u9332\\u306e\\u69d8\\u5b50\\u3092\\u3054\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059\\uff01(\\u30a8\\u30e2\\u3044\\u306a\\u3041\\uff01)</p><p><br/>\\u662f\\u975e\\u3001\\u4f75\\u305b\\u3066\\u3053\\u3061\\u3089\\u3082\\u3054\\u8996\\u8074\\u304f\\u3060\\u3055\\u3044\\u307e\\u305b\\u3002</p><embed embedtype=\\\"media\\\" url=\\\"https://youtu.be/IDVYa-05hgM\\\"/><p></p><p>\\u4eca\\u5f8c\\u3068\\u3082 mosquitone \\u3092\\u5f15\\u304d\\u7d9a\\u304d\\u3088\\u308d\\u3057\\u304f\\u304a\\u9858\\u3044\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002</p><p></p>\", \"author\": null, \"tagged_items\": [{\"pk\": null, \"tag\": 6, \"content_object\": 14}], \"gallery_images\": [{\"pk\": 1, \"sort_order\": 0, \"page\": 14, \"image\": 19, \"caption\": \"\"}], \"categories\": []}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 74,
+  "fields": {
+    "page": 4,
+    "submitted_for_moderation": false,
+    "created_at": "2019-09-03T10:21:29.851Z",
+    "user": [
+      "yyamashita"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100020001\", \"depth\": 3, \"numchild\": 0, \"title\": \"About us\", \"draft_title\": \"About us\", \"slug\": \"band\", \"content_type\": 7, \"live\": true, \"has_unpublished_changes\": true, \"url_path\": \"/home/band/\", \"owner\": 1, \"seo_title\": \"About us (Band)\", \"show_in_menus\": true, \"search_description\": \"mosquitone \\u306e\\u6b74\\u53f2 (History)\\u3001\\u30e1\\u30f3\\u30d0\\u30fc (Members) \\u60c5\\u5831\\u3067\\u3059\\u3002\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-08-09T16:32:26.832Z\", \"last_published_at\": \"2019-08-16T18:14:31.666Z\", \"latest_revision_created_at\": \"2019-09-03T02:47:03.703Z\", \"live_revision\": 40, \"intro\": \"<p>mosquitone (\\u3082\\u3059\\u304d\\u30fc\\u3068\\u30fc\\u3093)\\u306f\\u6771\\u4eac\\u767a\\u306e\\u30a8\\u30e2\\u30d0\\u30f3\\u30c9\\u3067\\u3059\\u3002</p><p>\\u300cKeep going forward\\u300d\\u3092\\u30c6\\u30fc\\u30de\\u306b\\u90fd\\u5185\\u3067\\u7cbe\\u529b\\u7684\\u306b\\u6d3b\\u52d5\\u3057\\u3066\\u3044\\u307e\\u3059\\u3002</p><p><a id=\\\"9\\\" linktype=\\\"page\\\">\\u30e9\\u30a4\\u30d6</a>\\u3078\\u306e\\u51fa\\u6f14\\u4f9d\\u983c\\u306a\\u3069\\u3001\\u304a\\u554f\\u3044\\u5408\\u308f\\u305b\\u306f <a id=\\\"5\\\" linktype=\\\"page\\\">Contact</a> \\u304b\\u3089\\u3088\\u308d\\u3057\\u304f\\u304a\\u9858\\u3044\\u3044\\u305f\\u3057\\u307e\\u3059\\uff01</p>\", \"english_history\": \"\", \"japanese_history\": \"\", \"main_image\": 1, \"background_image\": 13}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 75,
+  "fields": {
+    "page": 11,
+    "submitted_for_moderation": false,
+    "created_at": "2019-09-03T10:23:37.741Z",
+    "user": [
+      "miyazaki"
+    ],
+    "content_json": "{\"pk\": 11, \"path\": \"0001000200030001\", \"depth\": 4, \"numchild\": 0, \"title\": \"Demo#1\", \"draft_title\": \"Demo#1\", \"slug\": \"demo1\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/music/demo1/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-08-09T17:51:33.847Z\", \"last_published_at\": \"2019-09-03T10:13:04.455Z\", \"latest_revision_created_at\": \"2019-09-03T10:13:04.418Z\", \"live_revision\": 72, \"release_date\": \"2019-09-01\", \"copy\": \"First demo\", \"description\": \"<p>mosquitone \\u3068\\u3057\\u3066\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u3067\\u3059\\u3002<br/>\\u540c\\u3058\\u304f mosquitone \\u3068\\u3057\\u3066\\u6700\\u521d\\u306e\\u30aa\\u30ea\\u30b8\\u30ca\\u30eb\\u697d\\u66f2\\u300cKeep going forward\\u300d,\\u300cMy sadness \\u300d\\u306e\\uff12\\u66f2\\u3092\\u53ce\\u9332\\u3002<br/><a href=\\\"http://mosquitone.bandcamp.com/album/demo-01\\\">bandcamp</a> \\u3067\\u30a2\\u30eb\\u30d0\\u30e0\\u8996\\u8074\\uff06\\u30c0\\u30a6\\u30f3\\u30ed\\u30fc\\u30c9\\u306e\\u4ed6\\u3001youtube \\u3067\\u30ec\\u30b3\\u30fc\\u30c7\\u30a3\\u30f3\\u30b0\\u98a8\\u666f\\u3092\\u53ce\\u3081\\u305f<a href=\\\"https://youtu.be/IDVYa-05hgM\\\">\\u300cMy sadness\\u300dMV</a>\\u3092\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059!</p>\", \"artwork\": 19, \"bandcamp_album_url\": \"http://mosquitone.bandcamp.com/album/demo-01\", \"bandcamp_player_url\": \"https://bandcamp.com/EmbeddedPlayer/album=3118256726/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/tracklist=true/transparent=true/\", \"youtube_url\": \"https://youtu.be/IDVYa-05hgM\", \"tracks\": [{\"pk\": 1, \"sort_order\": 0, \"page\": 11, \"title\": \"My sadness\", \"duration\": \"00:04:00\"}, {\"pk\": 2, \"sort_order\": 1, \"page\": 11, \"title\": \"Keep going forward\", \"duration\": \"00:03:50\"}]}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 76,
+  "fields": {
+    "page": 11,
+    "submitted_for_moderation": false,
+    "created_at": "2019-09-03T10:25:48.228Z",
+    "user": [
+      "miyazaki"
+    ],
+    "content_json": "{\"pk\": 11, \"path\": \"0001000200030001\", \"depth\": 4, \"numchild\": 0, \"title\": \"Demo#1\", \"draft_title\": \"Demo#1\", \"slug\": \"demo1\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": true, \"url_path\": \"/home/music/demo1/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-08-09T17:51:33.847Z\", \"last_published_at\": \"2019-09-03T10:13:04.455Z\", \"latest_revision_created_at\": \"2019-09-03T10:23:37.741Z\", \"live_revision\": 72, \"release_date\": \"2019-09-01\", \"copy\": \"First demo\", \"description\": \"<p>mosquitone \\u3068\\u3057\\u3066\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u3067\\u3059\\u3002<br/>\\u540c\\u3058\\u304f mosquitone \\u3068\\u3057\\u3066\\u6700\\u521d\\u306e\\u30aa\\u30ea\\u30b8\\u30ca\\u30eb\\u697d\\u66f2\\u300cKeep going forward\\u300d,\\u300cMy sadness \\u300d\\u306e\\uff12\\u66f2\\u3092\\u53ce\\u9332\\u3002<br/><a href=\\\"http://mosquitone.bandcamp.com/album/demo-01\\\">bandcamp</a> \\u3067\\u30a2\\u30eb\\u30d0\\u30e0\\u8996\\u8074\\uff06\\u30c0\\u30a6\\u30f3\\u30ed\\u30fc\\u30c9\\u306e\\u4ed6\\u3001youtube \\u3067\\u30ec\\u30b3\\u30fc\\u30c7\\u30a3\\u30f3\\u30b0\\u98a8\\u666f\\u3092\\u53ce\\u3081\\u305f</p><p><a href=\\\"https://youtu.be/IDVYa-05hgM\\\">\\u300cMy sadness\\u300dMV</a>\\u3092\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059\\uff01</p>\", \"artwork\": 19, \"bandcamp_album_url\": \"http://mosquitone.bandcamp.com/album/demo-01\", \"bandcamp_player_url\": \"https://bandcamp.com/EmbeddedPlayer/album=3118256726/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/tracklist=true/transparent=true/\", \"youtube_url\": \"https://youtu.be/IDVYa-05hgM\", \"tracks\": [{\"pk\": 1, \"sort_order\": 0, \"page\": null, \"title\": \"My sadness\", \"duration\": \"00:04:00\"}, {\"pk\": 2, \"sort_order\": 1, \"page\": null, \"title\": \"Keep going forward\", \"duration\": \"00:03:50\"}]}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 77,
+  "fields": {
+    "page": 11,
+    "submitted_for_moderation": false,
+    "created_at": "2019-09-03T10:26:10.957Z",
+    "user": [
+      "miyazaki"
+    ],
+    "content_json": "{\"pk\": 11, \"path\": \"0001000200030001\", \"depth\": 4, \"numchild\": 0, \"title\": \"Demo#1\", \"draft_title\": \"Demo#1\", \"slug\": \"demo1\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": true, \"url_path\": \"/home/music/demo1/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-08-09T17:51:33.847Z\", \"last_published_at\": \"2019-09-03T10:13:04.455Z\", \"latest_revision_created_at\": \"2019-09-03T10:25:48.228Z\", \"live_revision\": 72, \"release_date\": \"2019-09-01\", \"copy\": \"First demo\", \"description\": \"<p>mosquitone \\u3068\\u3057\\u3066\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u3067\\u3059\\u3002<br/>\\u540c\\u3058\\u304f mosquitone \\u3068\\u3057\\u3066\\u6700\\u521d\\u306e\\u30aa\\u30ea\\u30b8\\u30ca\\u30eb\\u697d\\u66f2\\u300cKeep going forward\\u300d,\\u300cMy sadness \\u300d</p><p>\\u306e\\uff12\\u66f2\\u3092\\u53ce\\u9332\\u3002<br/><a href=\\\"http://mosquitone.bandcamp.com/album/demo-01\\\">bandcamp</a> \\u3067\\u30a2\\u30eb\\u30d0\\u30e0\\u8996\\u8074\\uff06\\u30c0\\u30a6\\u30f3\\u30ed\\u30fc\\u30c9\\u306e\\u4ed6\\u3001youtube \\u3067\\u30ec\\u30b3\\u30fc\\u30c7\\u30a3\\u30f3\\u30b0\\u98a8\\u666f\\u3092\\u53ce\\u3081\\u305f</p><p><a href=\\\"https://youtu.be/IDVYa-05hgM\\\">\\u300cMy sadness\\u300dMV</a>\\u3092\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059\\uff01</p>\", \"artwork\": 19, \"bandcamp_album_url\": \"http://mosquitone.bandcamp.com/album/demo-01\", \"bandcamp_player_url\": \"https://bandcamp.com/EmbeddedPlayer/album=3118256726/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/tracklist=true/transparent=true/\", \"youtube_url\": \"https://youtu.be/IDVYa-05hgM\", \"tracks\": [{\"pk\": 1, \"sort_order\": 0, \"page\": null, \"title\": \"My sadness\", \"duration\": \"00:04:00\"}, {\"pk\": 2, \"sort_order\": 1, \"page\": null, \"title\": \"Keep going forward\", \"duration\": \"00:03:50\"}]}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 78,
+  "fields": {
+    "page": 11,
+    "submitted_for_moderation": false,
+    "created_at": "2019-09-03T10:26:36.796Z",
+    "user": [
+      "miyazaki"
+    ],
+    "content_json": "{\"pk\": 11, \"path\": \"0001000200030001\", \"depth\": 4, \"numchild\": 0, \"title\": \"Demo#1\", \"draft_title\": \"Demo#1\", \"slug\": \"demo1\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": true, \"url_path\": \"/home/music/demo1/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-08-09T17:51:33.847Z\", \"last_published_at\": \"2019-09-03T10:13:04.455Z\", \"latest_revision_created_at\": \"2019-09-03T10:26:10.957Z\", \"live_revision\": 72, \"release_date\": \"2019-09-01\", \"copy\": \"First demo\", \"description\": \"<p>mosquitone \\u3068\\u3057\\u3066\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u3067\\u3059\\u3002<br/>\\u540c\\u3058\\u304f mosquitone \\u3068\\u3057\\u3066\\u6700\\u521d\\u306e\\u30aa\\u30ea\\u30b8\\u30ca\\u30eb\\u697d\\u66f2</p><p>\\u300cKeep going forward\\u300d,\\u300cMy sadness \\u300d\\u306e\\uff12\\u66f2\\u3092\\u53ce\\u9332\\u3002<br/><a href=\\\"http://mosquitone.bandcamp.com/album/demo-01\\\">bandcamp</a> \\u3067\\u30a2\\u30eb\\u30d0\\u30e0\\u8996\\u8074\\uff06\\u30c0\\u30a6\\u30f3\\u30ed\\u30fc\\u30c9\\u306e\\u4ed6\\u3001youtube \\u3067\\u30ec\\u30b3\\u30fc\\u30c7\\u30a3\\u30f3\\u30b0\\u98a8\\u666f\\u3092\\u53ce\\u3081\\u305f</p><p><a href=\\\"https://youtu.be/IDVYa-05hgM\\\">\\u300cMy sadness\\u300dMV</a>\\u3092\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059\\uff01</p>\", \"artwork\": 19, \"bandcamp_album_url\": \"http://mosquitone.bandcamp.com/album/demo-01\", \"bandcamp_player_url\": \"https://bandcamp.com/EmbeddedPlayer/album=3118256726/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/tracklist=true/transparent=true/\", \"youtube_url\": \"https://youtu.be/IDVYa-05hgM\", \"tracks\": [{\"pk\": 1, \"sort_order\": 0, \"page\": null, \"title\": \"My sadness\", \"duration\": \"00:04:00\"}, {\"pk\": 2, \"sort_order\": 1, \"page\": null, \"title\": \"Keep going forward\", \"duration\": \"00:03:50\"}]}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 79,
+  "fields": {
+    "page": 11,
+    "submitted_for_moderation": false,
+    "created_at": "2019-09-03T10:32:50.679Z",
+    "user": [
+      "miyazaki"
+    ],
+    "content_json": "{\"pk\": 11, \"path\": \"0001000200030001\", \"depth\": 4, \"numchild\": 0, \"title\": \"Demo#1\", \"draft_title\": \"Demo#1\", \"slug\": \"demo1\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": true, \"url_path\": \"/home/music/demo1/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-08-09T17:51:33.847Z\", \"last_published_at\": \"2019-09-03T10:13:04.455Z\", \"latest_revision_created_at\": \"2019-09-03T10:26:36.796Z\", \"live_revision\": 72, \"release_date\": \"2019-09-01\", \"copy\": \"First demo\", \"description\": \"<p>mosquitone \\u3068\\u3057\\u3066\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u3067\\u3059\\u3002<br/>\\u540c\\u3058\\u304f mosquitone \\u3068\\u3057\\u3066\\u6700\\u521d\\u306e\\u30aa\\u30ea\\u30b8\\u30ca\\u30eb\\u697d\\u66f2</p><p>\\u300cKeep going forward\\u300d,\\u300cMy sadness \\u300d\\u306e\\uff12\\u66f2\\u3092\\u53ce\\u9332\\u3002<br/><a href=\\\"http://mosquitone.bandcamp.com/album/demo-01\\\">bandcamp</a> \\u3067\\u30a2\\u30eb\\u30d0\\u30e0\\u8996\\u8074\\uff06\\u30c0\\u30a6\\u30f3\\u30ed\\u30fc\\u30c9\\u306e\\u4ed6\\u3001youtube \\u3067\\u30ec\\u30b3\\u30fc\\u30c7\\u30a3\\u30f3\\u30b0\\u98a8\\u666f\\u3092\\u53ce\\u3081\\u305f</p><p><a href=\\\"https://youtu.be/IDVYa-05hgM\\\">\\u300cMy sadness\\u300dMV</a>\\u3092\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059\\uff01</p>\", \"artwork\": 19, \"bandcamp_album_url\": \"http://mosquitone.bandcamp.com/album/demo-01\", \"bandcamp_player_url\": \"https://bandcamp.com/EmbeddedPlayer/album=3118256726/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/tracklist=true/transparent=true/\", \"youtube_url\": \"https://youtu.be/IDVYa-05hgM\", \"tracks\": [{\"pk\": 1, \"sort_order\": 0, \"page\": null, \"title\": \"My sadness\", \"duration\": \"00:04:00\"}, {\"pk\": 2, \"sort_order\": 1, \"page\": null, \"title\": \"Keep going forward\", \"duration\": \"00:03:50\"}]}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 80,
+  "fields": {
+    "page": 11,
+    "submitted_for_moderation": false,
+    "created_at": "2019-09-03T10:33:08.951Z",
+    "user": [
+      "miyazaki"
+    ],
+    "content_json": "{\"pk\": 11, \"path\": \"0001000200030001\", \"depth\": 4, \"numchild\": 0, \"title\": \"Demo#1\", \"draft_title\": \"Demo#1\", \"slug\": \"demo1\", \"content_type\": 17, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/music/demo1/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-08-09T17:51:33.847Z\", \"last_published_at\": \"2019-09-03T10:32:50.713Z\", \"latest_revision_created_at\": \"2019-09-03T10:32:50.679Z\", \"live_revision\": 79, \"release_date\": \"2019-09-01\", \"copy\": \"First demo\", \"description\": \"<p>mosquitone \\u3068\\u3057\\u3066\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u3067\\u3059\\u3002<br/>\\u540c\\u3058\\u304f mosquitone \\u3068\\u3057\\u3066\\u6700\\u521d\\u306e\\u30aa\\u30ea\\u30b8\\u30ca\\u30eb\\u697d\\u66f2</p><p>\\u300cKeep going forward\\u300d,\\u300cMy sadness \\u300d\\u306e\\uff12\\u66f2\\u3092\\u53ce\\u9332\\u3002<br/><a href=\\\"http://mosquitone.bandcamp.com/album/demo-01\\\">bandcamp</a> \\u3067\\u30a2\\u30eb\\u30d0\\u30e0\\u8996\\u8074\\uff06\\u30c0\\u30a6\\u30f3\\u30ed\\u30fc\\u30c9\\u306e\\u4ed6\\u3001youtube \\u3067\\u30ec\\u30b3\\u30fc\\u30c7\\u30a3\\u30f3\\u30b0\\u98a8\\u666f\\u3092\\u53ce\\u3081\\u305f</p><p><a href=\\\"https://youtu.be/IDVYa-05hgM\\\">\\u300cMy sadness\\u300dMV</a>\\u3092\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059\\uff01</p>\", \"artwork\": 19, \"bandcamp_album_url\": \"http://mosquitone.bandcamp.com/album/demo-01\", \"bandcamp_player_url\": \"https://bandcamp.com/EmbeddedPlayer/album=3118256726/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/tracklist=true/transparent=true/\", \"youtube_url\": \"https://youtu.be/IDVYa-05hgM\", \"tracks\": [{\"pk\": 1, \"sort_order\": 0, \"page\": 11, \"title\": \"My sadness\", \"duration\": \"00:04:00\"}, {\"pk\": 2, \"sort_order\": 1, \"page\": 11, \"title\": \"Keep going forward\", \"duration\": \"00:03:50\"}]}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 81,
+  "fields": {
+    "page": 14,
+    "submitted_for_moderation": false,
+    "created_at": "2019-09-03T12:00:00.350Z",
+    "user": [
+      "gentarou"
+    ],
+    "content_json": "{\"pk\": 14, \"path\": \"0001000200040002\", \"depth\": 4, \"numchild\": 0, \"title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\", \"draft_title\": \"\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\", \"slug\": \"\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\", \"content_type\": 10, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/news/\\u30c7\\u30e2\\u97f3\\u6e90demo-01\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"first_published_at\": \"2019-09-03T09:28:56.169Z\", \"last_published_at\": \"2019-09-03T10:16:39.497Z\", \"latest_revision_created_at\": \"2019-09-03T10:16:39.459Z\", \"live_revision\": 73, \"date\": \"2019-09-03\", \"intro\": \"\\u3053\\u306e\\u5ea6 mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u300cdemo #01\\u300d\\u3092\\u516c\\u958b\\u3057\\u307e\\u3057\\u305f\\u3053\\u3068\\u3092\\u304a\\u77e5\\u3089\\u305b\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002\", \"body\": \"<p>\\u3053\\u3093\\u306b\\u3061\\u306f\\u3002mosquitone \\u3067\\u3059\\u3002</p><p>\\u3053\\u306e\\u5ea6\\u3001mosquitone \\u304c\\u521d\\u306e\\u30c7\\u30e2\\u97f3\\u6e90\\u3068\\u306a\\u308b\\u300c<a id=\\\"11\\\" linktype=\\\"page\\\">demo#01</a>\\u300d\\u3092\\u516c\\u958b\\u3044\\u305f\\u3057\\u307e\\u3057\\u305f\\u3002</p><p><a id=\\\"11\\\" linktype=\\\"page\\\">\\u672c\\u30b5\\u30a4\\u30c8\\u300cmusic\\u300d\\u30da\\u30fc\\u30b8</a>\\u3067 \\u672c\\u97f3\\u6e90\\u3092\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059\\u3002<br/>\\u662f\\u975e\\u3054\\u8996\\u8074\\u304f\\u3060\\u3055\\u3044\\uff01</p><p></p><embed alt=\\\"demo-artwork-mini.png\\\" embedtype=\\\"image\\\" format=\\\"fullwidth\\\" id=\\\"24\\\"/><p></p><p>\\u307e\\u305f\\u3001<a href=\\\"https://www.youtube.com/channel/UCkGHjxTGURpNC6kCpwscKyg?view_as=subscriber\\\">Youtube \\u516c\\u5f0f\\u30c1\\u30e3\\u30f3\\u30cd\\u30eb</a> \\u3067\\u3001 <a href=\\\"https://youtu.be/IDVYa-05hgM\\\">My sadness MV</a> \\u3068\\u3057\\u3066\\u3001\\u672c\\u97f3\\u6e90\\u53ce\\u9332\\u306e\\u69d8\\u5b50\\u3092\\u3054\\u8996\\u8074\\u3044\\u305f\\u3060\\u3051\\u307e\\u3059\\uff01(\\u30a8\\u30e2\\u3044\\u306a\\u3041\\uff01)</p><p><br/>\\u662f\\u975e\\u3001\\u4f75\\u305b\\u3066\\u3053\\u3061\\u3089\\u3082\\u3054\\u8996\\u8074\\u304f\\u3060\\u3055\\u3044\\u307e\\u305b\\u3002</p><embed embedtype=\\\"media\\\" url=\\\"https://youtu.be/IDVYa-05hgM\\\"/><p></p><p>\\u4eca\\u5f8c\\u3068\\u3082 mosquitone \\u3092\\u5f15\\u304d\\u7d9a\\u304d\\u3088\\u308d\\u3057\\u304f\\u304a\\u9858\\u3044\\u3044\\u305f\\u3057\\u307e\\u3059\\u3002</p><p></p>\", \"author\": null, \"tagged_items\": [{\"pk\": null, \"tag\": 6, \"content_object\": 14}], \"gallery_images\": [{\"pk\": 1, \"sort_order\": 0, \"page\": 14, \"image\": 19, \"caption\": \"\"}], \"categories\": []}",
+    "approved_go_live_at": null
+  }
+},
+{
   "model": "wagtailcore.page",
   "pk": 1,
   "fields": {
@@ -1667,9 +2138,9 @@
     "expired": false,
     "locked": false,
     "first_published_at": "2019-08-09T16:32:26.832Z",
-    "last_published_at": "2019-08-16T18:14:31.666Z",
-    "latest_revision_created_at": "2019-08-16T18:14:31.627Z",
-    "live_revision": 40
+    "last_published_at": "2019-09-03T10:21:29.902Z",
+    "latest_revision_created_at": "2019-09-03T10:21:29.851Z",
+    "live_revision": 74
   }
 },
 {
@@ -1744,7 +2215,7 @@
   "fields": {
     "path": "000100020004",
     "depth": 3,
-    "numchild": 1,
+    "numchild": 2,
     "title": "News",
     "draft_title": "News",
     "slug": "news",
@@ -1898,9 +2369,9 @@
     "expired": false,
     "locked": false,
     "first_published_at": "2019-08-09T17:51:33.847Z",
-    "last_published_at": "2019-09-02T15:33:09.867Z",
-    "latest_revision_created_at": "2019-09-02T15:33:09.827Z",
-    "live_revision": 50
+    "last_published_at": "2019-09-03T10:33:08.990Z",
+    "latest_revision_created_at": "2019-09-03T10:33:08.951Z",
+    "live_revision": 80
   }
 },
 {
@@ -1931,9 +2402,42 @@
     "expired": false,
     "locked": false,
     "first_published_at": "2019-08-09T17:57:22.638Z",
-    "last_published_at": "2019-09-02T16:15:01.896Z",
-    "latest_revision_created_at": "2019-09-02T16:15:01.847Z",
-    "live_revision": 52
+    "last_published_at": "2019-09-03T09:50:31.057Z",
+    "latest_revision_created_at": "2019-09-03T09:50:31.013Z",
+    "live_revision": 65
+  }
+},
+{
+  "model": "wagtailcore.page",
+  "pk": 14,
+  "fields": {
+    "path": "0001000200040002",
+    "depth": 4,
+    "numchild": 0,
+    "title": "\u30c7\u30e2\u97f3\u6e90\u300cdemo #01\u300d\u3092\u516c\u958b\u3057\u307e\u3057\u305f",
+    "draft_title": "\u30c7\u30e2\u97f3\u6e90\u300cdemo #01\u300d\u3092\u516c\u958b\u3057\u307e\u3057\u305f",
+    "slug": "\u30c7\u30e2\u97f3\u6e90demo-01\u3092\u516c\u958b\u3044\u305f\u3057\u307e\u3057\u305f",
+    "content_type": [
+      "news",
+      "newspage"
+    ],
+    "live": true,
+    "has_unpublished_changes": true,
+    "url_path": "/home/news/\u30c7\u30e2\u97f3\u6e90demo-01\u3092\u516c\u958b\u3044\u305f\u3057\u307e\u3057\u305f/",
+    "owner": [
+      "yyamashita"
+    ],
+    "seo_title": "",
+    "show_in_menus": false,
+    "search_description": "",
+    "go_live_at": null,
+    "expire_at": null,
+    "expired": false,
+    "locked": false,
+    "first_published_at": "2019-09-03T09:28:56.169Z",
+    "last_published_at": "2019-09-03T10:16:39.497Z",
+    "latest_revision_created_at": "2019-09-03T12:00:00.350Z",
+    "live_revision": 73
   }
 },
 {
@@ -2089,9 +2593,9 @@
   "fields": {
     "collection": 1,
     "title": "yamashita-image.png",
-    "file": "original_images/yamashita.png",
-    "width": 938,
-    "height": 885,
+    "file": "original_images/yyamashita.png",
+    "width": 800,
+    "height": 800,
     "created_at": "2019-08-09T17:15:44.889Z",
     "uploaded_by_user": [
       "yyamashita"
@@ -2100,8 +2604,8 @@
     "focal_point_y": null,
     "focal_point_width": null,
     "focal_point_height": null,
-    "file_size": 1050614,
-    "file_hash": "c0b6ebe2c122c66a8639953dd4fd2d81217b4967"
+    "file_size": 830941,
+    "file_hash": "cef0e051702b19fc1fdbc3174cf96701a8189f15"
   }
 },
 {
@@ -2194,19 +2698,19 @@
   "fields": {
     "collection": 1,
     "title": "mosquitone-all.jpg",
-    "file": "original_images/c.JPG",
-    "width": 3200,
-    "height": 2400,
+    "file": "original_images/958F6640-5B32-4D87-9643-BAE131234DB3.jpeg",
+    "width": 1536,
+    "height": 1536,
     "created_at": "2019-08-14T14:31:57.249Z",
     "uploaded_by_user": [
       "yyamashita"
     ],
-    "focal_point_x": null,
-    "focal_point_y": null,
-    "focal_point_width": null,
-    "focal_point_height": null,
-    "file_size": 1540463,
-    "file_hash": "dd789e4ca9b3d7323fa529db160b6329c43abd38"
+    "focal_point_x": 281,
+    "focal_point_y": 315,
+    "focal_point_width": 9,
+    "focal_point_height": 439,
+    "file_size": 346080,
+    "file_hash": "cd193a59cb71ce90bec77a9bfe35202f2eed83f1"
   }
 },
 {
@@ -2215,19 +2719,19 @@
   "fields": {
     "collection": 1,
     "title": "mosquitone-show.jpg",
-    "file": "original_images/show.jpg",
+    "file": "original_images/B343A105-57CF-4F5F-82DD-EA7D4A394E2D.jpeg",
     "width": 1536,
-    "height": 855,
+    "height": 1536,
     "created_at": "2019-08-14T14:32:26.233Z",
     "uploaded_by_user": [
       "yyamashita"
     ],
-    "focal_point_x": null,
-    "focal_point_y": null,
-    "focal_point_width": null,
-    "focal_point_height": null,
-    "file_size": 583284,
-    "file_hash": "08d126ff829e901285870042886fbf55a0746e45"
+    "focal_point_x": 1354,
+    "focal_point_y": 388,
+    "focal_point_width": 13,
+    "focal_point_height": 638,
+    "file_size": 346080,
+    "file_hash": "cd193a59cb71ce90bec77a9bfe35202f2eed83f1"
   }
 },
 {
@@ -2236,9 +2740,9 @@
   "fields": {
     "collection": 1,
     "title": "mosquitone-watch-phone.png",
-    "file": "original_images/Untitled.png",
-    "width": 1758,
-    "height": 707,
+    "file": "original_images/DAD25ECC-C00A-4222-9BE4-65D665B9ECB1.jpeg",
+    "width": 1536,
+    "height": 1536,
     "created_at": "2019-08-14T14:33:14.706Z",
     "uploaded_by_user": [
       "yyamashita"
@@ -2247,8 +2751,8 @@
     "focal_point_y": null,
     "focal_point_width": null,
     "focal_point_height": null,
-    "file_size": 1673976,
-    "file_hash": "490627d99007d5a75b9fcc3ef08c3269437f81c3"
+    "file_size": 346080,
+    "file_hash": "cd193a59cb71ce90bec77a9bfe35202f2eed83f1"
   }
 },
 {
@@ -2257,9 +2761,9 @@
   "fields": {
     "collection": 1,
     "title": "gentarou.jpeg",
-    "file": "original_images/7FEA573E-BC0F-48AF-B488-D5E9898118A4.jpeg",
-    "width": 2896,
-    "height": 2061,
+    "file": "original_images/E461104F-CED4-47C5-B068-1890CC3EA33D.jpeg",
+    "width": 1440,
+    "height": 810,
     "created_at": "2019-08-18T05:05:41.159Z",
     "uploaded_by_user": [
       "yyamashita"
@@ -2268,8 +2772,8 @@
     "focal_point_y": null,
     "focal_point_width": null,
     "focal_point_height": null,
-    "file_size": 1168206,
-    "file_hash": "cd9f2f6bb0cf0cf976252fc1adb195624e784842"
+    "file_size": 198768,
+    "file_hash": "59f2308a1f50ea623e3c6e17e2a207eec06d899f"
   }
 },
 {
@@ -2299,9 +2803,9 @@
   "fields": {
     "collection": 1,
     "title": "IMG_0243.JPG",
-    "file": "original_images/IMG_0243.JPG",
+    "file": "original_images/chikara.jpg",
     "width": 800,
-    "height": 1200,
+    "height": 800,
     "created_at": "2019-09-02T13:51:08.212Z",
     "uploaded_by_user": [
       "chikara"
@@ -2310,8 +2814,8 @@
     "focal_point_y": 338,
     "focal_point_width": 278,
     "focal_point_height": 272,
-    "file_size": 162746,
-    "file_hash": "06e6702640d0e1eef7b1b83c20ec679c5825399c"
+    "file_size": 140527,
+    "file_hash": "b12e22eeefae605c341a2cba975a0d9973c15bc7"
   }
 },
 {
@@ -2320,9 +2824,9 @@
   "fields": {
     "collection": 1,
     "title": "mosquitone_demo1.jpg",
-    "file": "original_images/mosquitone_demo1.jpg",
-    "width": 1280,
-    "height": 1280,
+    "file": "original_images/Tu_.png",
+    "width": 816,
+    "height": 816,
     "created_at": "2019-09-02T14:13:06.509Z",
     "uploaded_by_user": [
       "yyamashita"
@@ -2331,8 +2835,113 @@
     "focal_point_y": null,
     "focal_point_width": null,
     "focal_point_height": null,
-    "file_size": 214974,
-    "file_hash": "659c2747a921a0f17a1c4f5fdfac8418d16ab41e"
+    "file_size": 1270029,
+    "file_hash": "8fcacee669360846e99f9de1cd788bc66f50fcf5"
+  }
+},
+{
+  "model": "wagtailimages.image",
+  "pk": 20,
+  "fields": {
+    "collection": 1,
+    "title": "7E6E1F2B-6D77-4F45-B867-2C5BF479F89F.jpeg",
+    "file": "original_images/7E6E1F2B-6D77-4F45-B867-2C5BF479F89F.jpeg",
+    "width": 1152,
+    "height": 2048,
+    "created_at": "2019-09-03T03:49:45.787Z",
+    "uploaded_by_user": [
+      "gentarou"
+    ],
+    "focal_point_x": null,
+    "focal_point_y": null,
+    "focal_point_width": null,
+    "focal_point_height": null,
+    "file_size": 279791,
+    "file_hash": "5d958e92190602ee1f484bb5da26202dd220e380"
+  }
+},
+{
+  "model": "wagtailimages.image",
+  "pk": 21,
+  "fields": {
+    "collection": 1,
+    "title": "30A8BE33-118A-4894-AE1F-A31A48DC2962.jpeg",
+    "file": "original_images/30A8BE33-118A-4894-AE1F-A31A48DC2962.jpeg",
+    "width": 1440,
+    "height": 1440,
+    "created_at": "2019-09-03T03:58:07.015Z",
+    "uploaded_by_user": [
+      "gentarou"
+    ],
+    "focal_point_x": null,
+    "focal_point_y": null,
+    "focal_point_width": null,
+    "focal_point_height": null,
+    "file_size": 271611,
+    "file_hash": "fc66cfdc4c9cb77b1bc0084a0d17bdc2a90bd576"
+  }
+},
+{
+  "model": "wagtailimages.image",
+  "pk": 22,
+  "fields": {
+    "collection": 1,
+    "title": "official-site.png",
+    "file": "original_images/Screen_Shot_2019-09-03_at_18.49.27.png",
+    "width": 1624,
+    "height": 1354,
+    "created_at": "2019-09-03T09:50:08.572Z",
+    "uploaded_by_user": [
+      "yyamashita"
+    ],
+    "focal_point_x": null,
+    "focal_point_y": null,
+    "focal_point_width": null,
+    "focal_point_height": null,
+    "file_size": 132171,
+    "file_hash": "d127e00e83ebd66507a7371bdbf1675a2f19ed58"
+  }
+},
+{
+  "model": "wagtailimages.image",
+  "pk": 23,
+  "fields": {
+    "collection": 1,
+    "title": "1CEE2FD3-5E98-47A6-B8DC-AB437FEECDAE.png",
+    "file": "original_images/1CEE2FD3-5E98-47A6-B8DC-AB437FEECDAE.png",
+    "width": 285,
+    "height": 285,
+    "created_at": "2019-09-03T10:13:11.692Z",
+    "uploaded_by_user": [
+      "gentarou"
+    ],
+    "focal_point_x": null,
+    "focal_point_y": null,
+    "focal_point_width": null,
+    "focal_point_height": null,
+    "file_size": 135177,
+    "file_hash": "855331b6972f203710d21badc44090ad4f1aeb02"
+  }
+},
+{
+  "model": "wagtailimages.image",
+  "pk": 24,
+  "fields": {
+    "collection": 1,
+    "title": "demo-artwork-mini.png",
+    "file": "original_images/Tu_.png",
+    "width": 256,
+    "height": 256,
+    "created_at": "2019-09-03T10:16:25.060Z",
+    "uploaded_by_user": [
+      "yyamashita"
+    ],
+    "focal_point_x": null,
+    "focal_point_y": null,
+    "focal_point_width": null,
+    "focal_point_height": null,
+    "file_size": 100247,
+    "file_hash": "9dde6edc605c73367ae0699fdadd94f098d1e226"
   }
 },
 {
@@ -2388,10 +2997,10 @@
   "fields": {
     "release_date": "2019-09-01",
     "copy": "First demo",
-    "description": "<p>mosquitone \u3068\u3057\u3066\u521d\u306e\u30c7\u30e2\u97f3\u6e90\u3067\u3059\u3002<br/>mosquitone \u3068\u3057\u3066\u3001\u6700\u521d\u306e\u30aa\u30ea\u30b8\u30ca\u30eb\u697d\u66f2\u300cKeep going forward\u300d,\u300cMy sadness \u300d\u306e\uff12\u66f2\u3092\u53ce\u9332\u3002<br/>bandcamp \u3067\u30a2\u30eb\u30d0\u30e0\u8996\u8074\uff06\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9\u306e\u4ed6\u3001youtube \u3067\u30ec\u30b3\u30fc\u30c7\u30a3\u30f3\u30b0\u98a8\u666f\u3092\u53ce\u3081\u305f\u300cMy sadness\u300dMV\u98a8\u52d5\u753b\u3092\u8996\u8074\u3044\u305f\u3060\u3051\u307e\u3059!\u3002</p>",
+    "description": "<p>mosquitone \u3068\u3057\u3066\u521d\u306e\u30c7\u30e2\u97f3\u6e90\u3067\u3059\u3002<br/>\u540c\u3058\u304f mosquitone \u3068\u3057\u3066\u6700\u521d\u306e\u30aa\u30ea\u30b8\u30ca\u30eb\u697d\u66f2</p><p>\u300cKeep going forward\u300d,\u300cMy sadness \u300d\u306e\uff12\u66f2\u3092\u53ce\u9332\u3002<br/><a href=\"http://mosquitone.bandcamp.com/album/demo-01\">bandcamp</a> \u3067\u30a2\u30eb\u30d0\u30e0\u8996\u8074\uff06\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9\u306e\u4ed6\u3001youtube \u3067\u30ec\u30b3\u30fc\u30c7\u30a3\u30f3\u30b0\u98a8\u666f\u3092\u53ce\u3081\u305f</p><p><a href=\"https://youtu.be/IDVYa-05hgM\">\u300cMy sadness\u300dMV</a>\u3092\u8996\u8074\u3044\u305f\u3060\u3051\u307e\u3059\uff01</p>",
     "artwork": 19,
     "bandcamp_album_url": "http://mosquitone.bandcamp.com/album/demo-01",
-    "bandcamp_player_url": "https://bandcamp.com/EmbeddedPlayer/album=3118256726/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+    "bandcamp_player_url": "https://bandcamp.com/EmbeddedPlayer/album=3118256726/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/tracklist=true/transparent=true/",
     "youtube_url": "https://youtu.be/IDVYa-05hgM"
   }
 },
@@ -2421,9 +3030,20 @@
   "model": "news.newspage",
   "pk": 12,
   "fields": {
-    "date": "2019-09-03",
+    "date": "2019-09-02",
     "intro": "\u3053\u306e\u5ea6 mosquitone \u304c\u516c\u5f0f\u30b5\u30a4\u30c8\u3092\u516c\u958b\u3057\u307e\u3057\u305f\u3053\u3068\u3092\u304a\u77e5\u3089\u305b\u3044\u305f\u3057\u307e\u3059\u3002",
     "body": "<p>\u3053\u306e\u5ea6 mosquitone \u304c <a id=\"3\" linktype=\"page\">\u516c\u5f0f\u30b5\u30a4\u30c8</a> \u3092\u516c\u958b\u3057\u307e\u3057\u305f\u3002</p><p>\u3053\u306e\u30b5\u30a4\u30c8\u306f <a id=\"9\" linktype=\"page\">\u30e9\u30a4\u30d6\u60c5\u5831</a> \u3084 <a id=\"6\" linktype=\"page\">\u97f3\u6e90</a> \u306a\u3069\u3001mosquitone \u306e\u69d8\u3005\u306a\u6d3b\u52d5\u30fb\u60c5\u5831\u3092\u767a\u4fe1\u3059\u308b\u30dd\u30fc\u30bf\u30eb\u3067\u3059\u3002</p><p>\u4eca\u307e\u3067\u60c5\u5831\u3092\u767a\u4fe1\u3057\u3066\u304d\u307e\u3057\u305f <a id=\"5\" linktype=\"page\">SNS</a> \b\u3082\u3001\u4eca\u5ea6\u3068\u3082\u66f4\u65b0\u3057\u3066\u53c2\u308a\u307e\u3059\u306e\u3067\u3001<br/>\u305d\u3061\u3089\u3082\u4f75\u305b\u3066\u3001\u3054\u53c2\u7167\u304f\u3060\u3055\u3044\u307e\u305b\u3002</p><p>\u5f15\u304d\u7d9a\u304d\u3001\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3044\u305f\u3057\u307e\u3059\u3002</p>",
+    "author": null,
+    "categories": []
+  }
+},
+{
+  "model": "news.newspage",
+  "pk": 14,
+  "fields": {
+    "date": "2019-09-03",
+    "intro": "\u3053\u306e\u5ea6 mosquitone \u304c\u521d\u306e\u30c7\u30e2\u97f3\u6e90\u300cdemo #01\u300d\u3092\u516c\u958b\u3057\u307e\u3057\u305f\u3053\u3068\u3092\u304a\u77e5\u3089\u305b\u3044\u305f\u3057\u307e\u3059\u3002",
+    "body": "<p>\u3053\u3093\u306b\u3061\u306f\u3002mosquitone \u3067\u3059\u3002</p><p>\u3053\u306e\u5ea6\u3001mosquitone \u304c\u521d\u306e\u30c7\u30e2\u97f3\u6e90\u3068\u306a\u308b\u300c<a id=\"11\" linktype=\"page\">demo#01</a>\u300d\u3092\u516c\u958b\u3044\u305f\u3057\u307e\u3057\u305f\u3002</p><p><a id=\"11\" linktype=\"page\">\u672c\u30b5\u30a4\u30c8\u300cmusic\u300d\u30da\u30fc\u30b8</a>\u3067 \u672c\u97f3\u6e90\u3092\u8996\u8074\u3044\u305f\u3060\u3051\u307e\u3059\u3002<br/>\u662f\u975e\u3054\u8996\u8074\u304f\u3060\u3055\u3044\uff01</p><p></p><embed alt=\"demo-artwork-mini.png\" embedtype=\"image\" format=\"fullwidth\" id=\"24\"/><p></p><p>\u307e\u305f\u3001<a href=\"https://www.youtube.com/channel/UCkGHjxTGURpNC6kCpwscKyg?view_as=subscriber\">Youtube \u516c\u5f0f\u30c1\u30e3\u30f3\u30cd\u30eb</a> \u3067\u3001 <a href=\"https://youtu.be/IDVYa-05hgM\">My sadness MV</a> \u3068\u3057\u3066\u3001\u672c\u97f3\u6e90\u53ce\u9332\u306e\u69d8\u5b50\u3092\u3054\u8996\u8074\u3044\u305f\u3060\u3051\u307e\u3059\uff01(\u30a8\u30e2\u3044\u306a\u3041\uff01)</p><p><br/>\u662f\u975e\u3001\u4f75\u305b\u3066\u3053\u3061\u3089\u3082\u3054\u8996\u8074\u304f\u3060\u3055\u3044\u307e\u305b\u3002</p><embed embedtype=\"media\" url=\"https://youtu.be/IDVYa-05hgM\"/><p></p><p>\u4eca\u5f8c\u3068\u3082 mosquitone \u3092\u5f15\u304d\u7d9a\u304d\u3088\u308d\u3057\u304f\u304a\u9858\u3044\u3044\u305f\u3057\u307e\u3059\u3002</p><p></p>",
     "author": null,
     "categories": []
   }
