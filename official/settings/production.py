@@ -33,3 +33,5 @@ DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 OFFICIAL_JQUERY_USE_CDN = True
 
 COMPRESS_ENABLED = True
+
+GA_TRACKING_ID = env['GA_TRACKING_ID']

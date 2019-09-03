@@ -34,6 +34,9 @@
     {# Override this in templates to add extra stylesheets #}
     {% endblock %}
     {% endcompress %}
+    {% include "./gatag.html" %}
+
+
 </head>
 
 <body class="{% block body_class %}{% endblock %}">
