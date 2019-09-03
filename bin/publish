@@ -23,6 +23,10 @@ wget --content-on-error \
      --quiet \
      --output-document=404.html \
      http://${SOURCE_DOMAIN}/404.html || true
+wget --quiet \
+     --output-document=sitemap.xml \
+     http://${SOURCE_DOMAIN}/sitemap.xml || true
+sed -i "s#http://localhost:8000/#https://${AWS_CLOUDFRONT_ALIAS}/#g" ./sitemap.xml
 
 
 if ${SYNC_SIZE_ONLY:-true}; then
