@@ -1,3 +1,9 @@
+.responsive-object {
+  /* workarond for wagtail embed content padding bug
+     See: https://github.com/wagtail/wagtail/issues/1495 */
+  padding-bottom: 0px !important;
+}
+
 .official.share {
   display: none;
 }
