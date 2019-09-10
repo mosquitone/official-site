@@ -16,7 +16,9 @@ def publish(request):
     result = pipe.stdout.read()
 
     response = HttpResponse(content_type='text/html')
-    response.write(
-        '<html><body><pre><code>{}</code></pre></body></html>'.format(result)
-    )
+
+    response.write('<html><body><pre><code>')
+    response.write(result)
+    response.write('</code></pre></body></html>')
+
     return response
