@@ -4,11 +4,17 @@ set -ue
 
 CACHE_DIR="$PWD/.cache/"
 SYNC_OPTION="--cache-control must-revalidate,public,max-age=3600"
+BUCKET_URL="s3://${AWS_BUCKET_NAME}"
+
+if ${SYNC_SIZE_ONLY:-true}; then
+SYNC_OPTION="${SYNC_OPTION} --size-only"
+fi
 
 mkdir -p ${CACHE_DIR} && cd ${CACHE_DIR}
 
 echo "Start Publish"
 
+# sync site content
 wget --no-host-directories \
      --force-directories \
      --adjust-extension  \
@@ -23,16 +29,14 @@ wget --content-on-error \
      --quiet \
      --output-document=404.html \
      http://${SOURCE_DOMAIN}/404.html || true
+
+aws s3 sync ${SYNC_OPTION:+${SYNC_OPTION}} . ${BUCKET_URL}
+
+# sync site content
 wget --quiet \
      --output-document=sitemap.xml \
      http://${SOURCE_DOMAIN}/sitemap.xml || true
 sed -i "s#http://localhost:8000/#https://${AWS_CLOUDFRONT_ALIAS}/#g" ./sitemap.xml
-
-
-if ${SYNC_SIZE_ONLY:-true}; then
-SYNC_OPTION="${SYNC_OPTION} --size-only"
-fi
-
-aws s3 sync ${SYNC_OPTION:+${SYNC_OPTION}} . s3://${AWS_BUCKET_NAME}
+aws s3 cp ./sitemap.xml ${BUCKET_URL}/sitemap.xml
 
 echo "Publish Success"
