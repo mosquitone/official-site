@@ -5,6 +5,13 @@ $(document)
       e.classList.remove('rich-text');
       e.classList.add('ui', 'container');
     })
+    // change wagtail image in richtext to semantic ui image
+    $('img.richtext-image').each(function (_, e) {
+      e.classList.remove('richtext-image');
+      e.classList.add('ui', 'image');
+      e.style.width = "auto";
+      e.style.height = "auto";
+    })
 
     // fix menu when passed
     $('.masthead')
