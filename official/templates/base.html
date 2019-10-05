@@ -40,16 +40,14 @@
 </head>
 
 <body class="{% block body_class %}{% endblock %}">
-    <!-- Following Menu -->
-    <menu class="ui large top fixed hidden menu">
-        <div class="ui container">
-            <a class="item" href="{% slugurl 'home' %}">Home</a>
-            <a class="item" href="{% slugurl 'band' %}">Band</a>
-            <a class="item" href="{% slugurl 'shows' %}">Shows</a>
-            <a class="item" href="{% slugurl 'news' %}">News</a>
-            <a class="item" href="{% slugurl 'music' %}">Music</a>
-            <a class="item" href="{% slugurl 'contact' %}">Contact</a>
-        </div>
+    <!-- Fixed Menu -->
+    <menu class="ui six item top fixed hidden menu">
+        <a class="item" href="{% slugurl 'home' %}">Home</a>
+        <a class="item" href="{% slugurl 'band' %}">Band</a>
+        <a class="item" href="{% slugurl 'shows' %}">Shows</a>
+        <a class="item" href="{% slugurl 'news' %}">News</a>
+        <a class="item" href="{% slugurl 'music' %}">Music</a>
+        <a class="item" href="{% slugurl 'contact' %}">Contact</a>
     </menu>
 
     <!-- Sidebar Menu -->
