@@ -3,7 +3,6 @@
 ## Requirements
 
 - pipenv
-- heroku cli
 
 ## Setup
 
@@ -11,7 +10,6 @@
 git clone https://github.com/mosquitone/official-site.git && cd official-site
 pipenv install && pipenv shell
 python ./manage.py migrate
-heroku login
 ```
 
 ## Start app
@@ -20,17 +18,9 @@ heroku login
 python ./manage.py runserver
 ```
 
-## Release 
+## Load Fixtures
 
-publish staging to production
-
-```bash
-heroku run --app mosquitone ./bin/publish
-```
-
-## Load Initial Data
-
-before download images, you need to create .env and define following env vars.
+before download fixture images, you need to create .env and define following env vars.
 
 - AWS_ACCESS_KEY_ID
 - AWS_BUCKET_NAME
@@ -40,4 +30,12 @@ before download images, you need to create .env and define following env vars.
 ```bash
 python ./manage.py loaddata ./official/fixtures/latest.json
 env $(cat .env | xargs) ./bin/download_image
+```
+
+## Release site to production
+
+To publish site from staging to production, first, install and setup Heroku CLI. after that, run following commands.
+
+```bash
+heroku run --app mosquitone ./bin/publish
 ```
