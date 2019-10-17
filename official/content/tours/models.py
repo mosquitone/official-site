@@ -63,12 +63,12 @@ class ShowIndexPage(Page):
 
     def get_context(self, request):
         today_start = datetime.combine(datetime.today(), time())
-        upcomming_show = Show.objects.order_by(
+        upcoming_show = Show.objects.order_by(
             'date').filter(date__gte=today_start)
         past_show = Show.objects.order_by('-date').filter(date__lt=today_start)
 
         context = super().get_context(request)
-        context['upcomming_show'] = upcomming_show
+        context['upcoming_show'] = upcoming_show
         context['past_show'] = past_show
 
         return context
