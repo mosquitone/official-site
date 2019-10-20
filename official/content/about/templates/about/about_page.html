@@ -17,41 +17,9 @@
 <div class="ui vertical segment container">
     <div class="ui middle aligned stackable grid container">
         <div class="row">
-            <div class="center aligned column">
+            <div class="eight wide column">
                 <h1 class="ui header">{{ page.title }}</h1>
                 <div class="intro"> {{ page.intro|richtext }}</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="eight wide column">
-                <h2 class="ui header">History</h2>
-                <div class="ui feed">
-                    <h3 class="ui header">ここまでの mosquitone</h3>
-                    {% for history in histories %}
-                    <div class="event">
-                        <div class="label">
-                            <div class="image avator">
-                                {% if history.by %}
-                                {% image history.by.avator max-100x100 %}
-                                {% else %}
-                                <img height="100" width="91" src="{% static 'image/mosquitone-avator.png' %}">
-                                {% endif %}
-                            </div>
-                        </div>
-                        <div class="content">
-                            <div class="summary">
-                                {{ history.sumarry }}
-                                <div class="date">
-                                    {{ history.date }}
-                                </div>
-                            </div>
-                            <div class="extra text">
-                                {{ history.text }}
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
             </div>
             <div class="six wide right floated column">
                 {% image page.main_image max-400x400 as main_image %}
@@ -103,6 +71,40 @@
                             </div>
                         </div>
 
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="center aligned column">
+                <div class="ui header">
+                    <h2>History</h2>
+                    <h3 class="ui sub header">ここまでの mosquitone</h3>
+                </div>
+                <div class="ui feed">
+                    {% for history in histories %}
+                    <div class="event">
+                        <div class="label">
+                            <div class="image avator">
+                                {% if history.by %}
+                                {% image history.by.avator max-100x100 %}
+                                {% else %}
+                                <img height="100" width="91" src="{% static 'image/mosquitone-avator.png' %}">
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="summary">
+                                {{ history.sumarry }}
+                                <div class="date">
+                                    {{ history.date }}
+                                </div>
+                            </div>
+                            <div class="extra text">
+                                {{ history.text }}
+                            </div>
+                        </div>
                     </div>
                     {% endfor %}
                 </div>
