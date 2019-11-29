@@ -9,8 +9,8 @@ pylint = "*"
 
 [packages]
 awscli = "*"
-wagtail = ">=2.6,<2.7"
-Django = "<2.3,>=2.2"
+wagtail = ">=2.7"
+Django = ">=2.2"
 django-toolbelt = "*"
 whitenoise = "*"
 django-storages = "*"
@@ -19,4 +19,4 @@ django-htmlmin = "*"
 django-compressor = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.8"
