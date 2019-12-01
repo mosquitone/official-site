@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM python:3.7
+FROM python:3.8
 LABEL maintainer="mosquitone8@gmail.com"
 
 # Set environment varibles
