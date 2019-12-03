@@ -1,3 +1,22 @@
+.official.content>header {
+  height: auto;
+  min-height: 5vh;
+}
+
+.official.content>main>* {
+  padding-bottom: 30px;
+}
+
+.official.content>main>.max-height {
+  height: auto;
+  min-height: 65vh;
+}
+
+.official.content>footer {
+  height: auto;
+  min-height: 30vh;
+}
+
 .responsive-object {
   /* workarond for wagtail embed content padding bug
      See: https://github.com/wagtail/wagtail/issues/1495 */
@@ -10,6 +29,13 @@
 
 .official.share.enable {
   display: initial;
+}
+
+.official.background.image.container {
+  content: "";
+  background-position: center center;
+  background-size: cover;
+  padding: 30px 10px;
 }
 
 .hidden.menu {
@@ -38,10 +64,6 @@
 .masthead h2 {
   font-size: 1.7em;
   font-weight: normal;
-}
-
-.ui.vertical.stripe {
-  padding: 4em 0em;
 }
 
 .ui.vertical.stripe h3 {
@@ -100,5 +122,14 @@
   .footer.segment {
     padding-top: 2em;
     padding-bottom: 1em;
+  }
+  .official.content>header {
+    min-height: 6vh;
+  }
+  .official.content>main>.max-height {
+    min-height: 57vh;
+  }
+  .official.content>footer {
+    min-height: 37vh;
   }
 }
