@@ -7,7 +7,7 @@
 }
 
 .official.ui.header {
-  font-size: 10em;
+  font-size: 9em;
   font-weight: normal;
 }
 
@@ -15,10 +15,18 @@
   font-size: 2em;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 768px) {
   .official.ui.header {
     font-size: 4.7em;
-    margin-top: 0px !important;
+  }
+  .official.ui.sub.header {
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 500px) {
+  .official.ui.header {
+    font-size: 7em;
   }
   .official.ui.sub.header {
     font-size: 1.5em;
