@@ -34,7 +34,7 @@ $(document)
     if (!topLevelPath.endsWith('/')) {
       topLevelPath += '/';
     }
-    $('.menu a.item').each(function () {
+    $('.link.menu > a.item').each(function () {
       if (!this.href) {
         return;
       }

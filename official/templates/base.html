@@ -41,7 +41,7 @@
 
 <body class="{% block body_class %}{% endblock %}">
     <!-- Fixed Menu -->
-    <menu class="ui six item top fixed hidden menu">
+    <menu class="ui six item top fixed hidden link menu">
         <a class="item" href="{% slugurl 'home' %}">Home</a>
         <a class="item" href="{% slugurl 'band' %}">Band</a>
         <a class="item" href="{% slugurl 'shows' %}">Shows</a>
@@ -51,7 +51,7 @@
     </menu>
 
     <!-- Sidebar Menu -->
-    <nav class="ui vertical inverted sidebar menu">
+    <nav class="ui vertical inverted sidebar link menu">
         <a class="item" href="{% slugurl 'home' %}">Home</a>
         <a class="item" href="{% slugurl 'band' %}">Band</a>
         <a class="item" href="{% slugurl 'shows' %}">Shows</a>
@@ -66,13 +66,18 @@
         <header class="ui inverted vertical masthead center aligned segment">
             <div class="ui container">
                 <nav class="ui large secondary inverted pointing menu">
-                    <a class="toc item"> <i class="sidebar icon"></i> </a>
-                    <a class="item" href="{% slugurl 'home' %}">Home</a>
-                    <a class="item" href="{% slugurl 'band' %}">Band</a>
-                    <a class="item" href="{% slugurl 'shows' %}">Shows</a>
-                    <a class="item" href="{% slugurl 'news' %}">News</a>
-                    <a class="item" href="{% slugurl 'music' %}">Music</a>
-                    <a class="item" href="{% slugurl 'contact' %}">Contact</a>
+                    <a class="logo link item" href="{% slugurl 'home' %}">
+                        <img class="official mosquito logo" src="{% static 'image/mosquito-logo.png' %}" alt="mosquitone">
+                    </a>
+                    <div class="link menu">
+                        <a class="toc item"> <i class="sidebar large icon"></i> </a>
+                        <a class="item" href="{% slugurl 'home' %}">Home</a>
+                        <a class="item" href="{% slugurl 'band' %}">Band</a>
+                        <a class="item" href="{% slugurl 'shows' %}">Shows</a>
+                        <a class="item" href="{% slugurl 'news' %}">News</a>
+                        <a class="item" href="{% slugurl 'music' %}">Music</a>
+                        <a class="item" href="{% slugurl 'contact' %}">Contact</a>
+                    </div>
                 </nav>
             </div>
             {% block header %}{% endblock %}

@@ -5,6 +5,7 @@
 
 .official.content>main>* {
   padding-bottom: 30px;
+  padding-top: 30px;
 }
 
 .official.content>main>.max-height {
@@ -15,6 +16,10 @@
 .official.content>footer {
   height: auto;
   min-height: 30vh;
+  display: flex;
+  flex-direction: column-reverse;
+  padding-top: 5em;
+  padding-bottom: 2em;
 }
 
 .responsive-object {
@@ -44,10 +49,6 @@
 
 .masthead.segment {
   padding: 1em 0em;
-}
-
-.masthead .logo.item img {
-  margin-right: 1em;
 }
 
 .masthead .ui.menu .ui.button {
@@ -95,33 +96,21 @@
   padding-bottom: 5em;
 }
 
-.footer.segment {
-  padding-top: 5em;
-  padding-bottom: 2em;
-}
-
 .secondary.pointing.menu .toc.item {
   display: none;
 }
 
-@media only screen and (max-width: 700px) {
-  .secondary.pointing.menu .item, .secondary.pointing.menu .menu {
+.secondary.pointing.menu .logo.item {
+  padding: 0;
+  margin: 0 0.2em;
+}
+
+@media only screen and (max-width: 768px) {
+  .secondary.pointing.menu .item {
     display: none;
   }
-  .secondary.pointing.menu .toc.item {
+  .secondary.pointing.menu .toc.item, .secondary.pointing.menu .logo.item {
     display: block;
-  }
-  .masthead h1.ui.header {
-    font-size: 2em;
-    margin-top: 0.5em;
-  }
-  .masthead h2 {
-    margin-top: 0.5em;
-    font-size: 1.5em;
-  }
-  .footer.segment {
-    padding-top: 2em;
-    padding-bottom: 1em;
   }
   .official.content>header {
     min-height: 6vh;
@@ -131,5 +120,20 @@
   }
   .official.content>footer {
     min-height: 37vh;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .secondary.pointing.menu .link.menu {
+    margin-left: auto !important;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 500px) {
+  .secondary.pointing.menu .link.menu {
+    order: 1;
+  }
+  .secondary.pointing.menu .logo.item {
+    order: 2;
   }
 }
