@@ -35,7 +35,7 @@ before download fixture images, you need to create .env and define following env
 [winOS]
 1. python ./manage.py loaddata ./official/fixtures/2019-12-01.json
 2. aws configure
-3. aws s3 sync "s3://mosquitone-official-site/images" ./media/images && aws s3 sync "s3://mosquitone-official-site/original_images" ./media/original_images
+3. aws s3 sync "s3://${AWS_BUCKET_NAME}" ./media/images && aws s3 sync "s3://${AWS_BUCKET_NAME}/original_images" ./media/original_images
 ```
 
 ## Release site to production
