@@ -7,9 +7,9 @@
 ## Setup
 
 ```bash
-git clone https://github.com/mosquitone/official-site.git && cd official-site
-pipenv install && pipenv shell
-python ./manage.py migrate
+1. git clone https://github.com/mosquitone/official-site.git && cd official-site
+2. pipenv install && pipenv shell
+3. python ./manage.py migrate
 ```
 
 ## Start app
@@ -29,13 +29,13 @@ before download fixture images, you need to create .env and define following env
 
 ```bash
 [macOS]
-python ./manage.py loaddata ./official/fixtures/latest.json
-env $(cat .env | xargs) ./bin/download_image
+1. python ./manage.py loaddata ./official/fixtures/latest.json
+2. env $(cat .env | xargs) ./bin/download_image
 
 [winOS]
-python ./manage.py loaddata ./official/fixtures/2019-12-01.json
-aws configure
-aws s3 sync "s3://mosquitone-official-site/images" ./media/images && aws s3 sync "s3://mosquitone-official-site/original_images" ./media/original_images
+1. python ./manage.py loaddata ./official/fixtures/2019-12-01.json
+2. aws configure
+3. aws s3 sync "s3://mosquitone-official-site/images" ./media/images && aws s3 sync "s3://mosquitone-official-site/original_images" ./media/original_images
 ```
 
 ## Release site to production
