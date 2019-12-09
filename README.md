@@ -7,9 +7,9 @@
 ## Setup
 
 ```bash
-1. git clone https://github.com/mosquitone/official-site.git && cd official-site
-2. pipenv install && pipenv shell
-3. python ./manage.py migrate
+1. `git clone https://github.com/mosquitone/official-site.git && cd official-site`
+2. `pipenv install && pipenv shell`
+3. `python ./manage.py migrate`
 ```
 
 ## Start app
@@ -28,15 +28,35 @@ before download fixture images, you need to create .env and define following env
 - AWS_SECRET_ACCESS_KEY
 
 ```bash
-[macOS]
-1. python ./manage.py loaddata ./official/fixtures/latest.json
-2. env $(cat .env | xargs) ./bin/download_image
-
-[winOS]
-1. python ./manage.py loaddata ./official/fixtures/2019-12-01.json
-2. aws configure
-3. aws s3 sync "s3://${AWS_BUCKET_NAME}" ./media/images && aws s3 sync "s3://${AWS_BUCKET_NAME}/original_images" ./media/original_images
+python ./manage.py loaddata ./official/fixtures/lateset.json
 ```
+
+### setup aws cli
+
+- When using 'aws configure' command.
+
+  ```bash
+  aws configure
+  ```
+
+- When not to use,and how to set environment variables.
+  ```bash
+  cli
+  ```
+
+
+  ### download media 
+
+- 手動で aws コマンドを使用する場合を説明(for windows user とでも書いておく)
+  ```bash
+  aws s3 sync "s3://${AWS_BUCKET_NAME}" ./media/images 
+  aws s3 sync "s3://${AWS_BUCKET_NAME}/original_images" ./media/original_images
+  ```
+
+- When using 'bin/download_images' file.
+  ```bash
+  env $(cat .env | xargs) ./bin/download_image
+  ```
 
 ## Release site to production
 
