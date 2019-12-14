@@ -9,48 +9,50 @@
 {% block body_class %}template-newspage{% endblock %}
 
 {% block content %}
-<div class="ui raised padded text container basic segment">
-    <div class="ui top right attached label">
-        <div class="detail">{{ page.release_date }}</div>
-    </div>
-    <div class="ui centered header">
-        <h1>{{ page.title }}</h1>
-        <h2 class="ui sub header">{{ page.copy }}</h2>
-    </div>
-    {% image page.artwork max-500x500 as artwork %}
-    <img width="500" height="" {{ artwork.attrs }} class="ui centered bordered image">
-    <div class="description">
-        <div class="ui center aligned basic segment">
-            {{ page.description | richtext }}
+<div class="ui inverted basic segment">
+    <div class="ui raised padded text container segment">
+        <div class="ui top right attached label">
+            <div class="detail">{{ page.release_date }}</div>
         </div>
-    </div>
-    <div class="content">
-        <div class="ui center aligned basic segment">
-            {% if page.bandcamp_album_url %}
-            {% if page.bandcamp_player_url %}
-            {% with page.bandcamp_album_url as album_url %}
-            {% with page.bandcamp_player_url as player_url %}
-            {% with "220px" as player_height %}
-            {% include './bandcamp_player.html' %}
-            {% endwith %}
-            {% endwith %}
-            {% endwith %}
-            {% else %}
-            <a href="{{ page.bandcamp_album_url }}" class="ui circular icon primary big button">
-                <i class="bandcamp icon"></i>
-                Listen Album
-            </a>
-            {% endif %}
-            {% endif %}
-            {% if page.youtube_url %}
-            <a href="{{ page.youtube_url }}" class="ui circular icon youtube big button">
-                <i class="youtube icon"></i>
-                See Video
-            </a>
-            {% endif %}
+        <div class="ui centered header">
+            <h1>{{ page.title }}</h1>
+            <h2 class="ui sub header">{{ page.copy }}</h2>
         </div>
+        {% image page.artwork max-500x500 as artwork %}
+        <img width="500" height="" {{ artwork.attrs }} class="ui centered bordered image">
+        <div class="description">
+            <div class="ui center aligned basic segment">
+                {{ page.description | richtext }}
+            </div>
+        </div>
+        <div class="content">
+            <div class="ui center aligned basic segment">
+                {% if page.bandcamp_album_url %}
+                {% if page.bandcamp_player_url %}
+                {% with page.bandcamp_album_url as album_url %}
+                {% with page.bandcamp_player_url as player_url %}
+                {% with "220px" as player_height %}
+                {% include './bandcamp_player.html' %}
+                {% endwith %}
+                {% endwith %}
+                {% endwith %}
+                {% else %}
+                <a href="{{ page.bandcamp_album_url }}" class="ui circular icon primary big button">
+                    <i class="bandcamp icon"></i>
+                    Listen Album
+                </a>
+                {% endif %}
+                {% endif %}
+                {% if page.youtube_url %}
+                <a href="{{ page.youtube_url }}" class="ui circular icon youtube big button">
+                    <i class="youtube icon"></i>
+                    See Video
+                </a>
+                {% endif %}
+            </div>
+        </div>
+        <p><a href="{% slugurl 'music' %}">Return to Music</a></p>
     </div>
-    <p><a href="{% slugurl 'music' %}">Return to Music</a></p>
 </div>
 
 {% endblock %}

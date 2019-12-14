@@ -37,10 +37,19 @@
 }
 
 .official.background.image.container {
-  content: "";
   background-position: center center;
   background-size: cover;
   padding: 30px 10px;
+}
+
+.official.background.fixed.image.container {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  position: fixed;
+  background-attachment: scroll;
+  padding: 0;
+  z-index: -1;
 }
 
 .hidden.menu {
@@ -94,6 +103,10 @@
 .quote.stripe.segment .grid .column {
   padding-top: 5em;
   padding-bottom: 5em;
+}
+
+.ui.masthead .secondary.pointing.menu {
+  border: none;
 }
 
 .secondary.pointing.menu .toc.item {
