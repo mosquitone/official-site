@@ -18,7 +18,7 @@
         <h2 class="ui sub header">{{ page.copy }}</h2>
     </div>
     {% image page.artwork max-500x500 as artwork %}
-    <img width="" height="" {{ artwork.attrs }} class="ui centered bordered image">
+    <img width="500" height="" {{ artwork.attrs }} class="ui centered bordered image">
     <div class="description">
         <div class="ui center aligned basic segment">
             {{ page.description | richtext }}

@@ -10,74 +10,26 @@
 {% endblock %}
 
 {% block content %}
-<div class="ui inverted vertical stripe segment">
-    <div class="ui middle aligned stackable grid container">
-        <div class="row">
-            <div class="center aligned column">
-                <h1 class="ui inverted header">
+<div class="ui inverted gray max-height very padded basic segment">
+    <div class="ui container">
+        <div class="ui three column centered grid">
+            <div class="row">
+                <h1 class="ui inverted centered header">
                     {{ page.title }}
                 </h1>
             </div>
-        </div>
-        <div class="row">
-            <div class="column">
-                <div class="ui text main segment container">
-                    <div class="ui divided items">
-                        {% for music_page in music_pages %}
-                        {% with music=music_page.specific %}
-                        <div class="item">
-                            <div class="ui top right attached label">
-                                <div class="detail">{{ music.release_date }}</div>
-                            </div>
-                            {% with music.artwork as artwork %}
-                            <a class="ui image" href="{% pageurl music %}">
-                                {% image artwork max-300x300 %}
-                            </a>
-                            {% endwith %}
-                            <div class="content">
-                                <a class="ui header" href="{% pageurl music %}">
-                                    <h2>{{ music.title }}</h2>
-                                    <div class="ui sub header">
-                                        {{ music.copy }}
-                                    </div>
-                                </a>
-                                <div class="description">
-                                    <div class="extra">
-                                        <div class="ui right aligned container">
-                                            {% if music.bandcamp_album_url %}
-                                            {% if music.bandcamp_player_url %}
-                                            {% with music.bandcamp_album_url as album_url %}
-                                            {% with music.bandcamp_player_url as player_url %}
-                                            {% with "220px" as player_height %}
-                                            {% with "100%" as player_width %}
-                                            {% include './bandcamp_player.html' %}
-                                            {% endwith %}
-                                            {% endwith %}
-                                            {% endwith %}
-                                            {% endwith %}
-                                            <a href="{{ music.bandcamp_album_url }}"
-                                                class="ui circular icon primary basic tiny button">
-                                                <i class="bandcamp icon"></i>
-                                                Bandcamp
-                                            </a>
-                                            {% endif %}
-                                            {% endif %}
-                                            {% if music.youtube_url %}
-                                            <a href="{{ music.youtube_url }}"
-                                                class="ui circular icon secondary tiny basic button">
-                                                <i class="youtube icon"></i>
-                                                YouTube
-                                            </a>
-                                            {% endif %}
-                                        </div>
-                                    </div>
-                                </div>
-                                {% endwith %}
-                                {% endfor %}
-                            </div>
-                        </div>
-                    </div>
+            {% for music_page in music_pages %}
+            {% with music=music_page.specific %}
+            <a class="sixteen wide mobile eight wide tablet five wide computer column" href="{% pageurl music %}">
+                <div class="ui rounded centered image">
+                    {% with music.artwork as artwork %}
+                    {% image artwork max-600x600 width="600" height="600" alt=music.title %}
+                    {% endwith %}
                 </div>
-            </div>
+            </a>
+            {% endwith %}
+            {% endfor %}
         </div>
-        {% endblock %}
+    </div>
+</div>
+{% endblock %}
