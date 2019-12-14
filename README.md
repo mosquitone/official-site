@@ -33,21 +33,19 @@ python ./manage.py loaddata ./official/fixtures/lateset.json
 
 ### setup aws cli
 
-- When using 'aws configure' command.
-
+- Setting environment variables.
+  
   ```bash
   aws configure
+  AWS Access Key ID[]: ${AWS_ACCESS_KEY_ID}
+  AWS Secret Access Key []: ${AWS_SECRET_ACCESS_KEY}
+  Default region name []: ${AWS_DEFAULT_REGION}
+  Default output format []: "text"
   ```
-
-- When not to use,and how to set environment variables.
-  ```bash
-  cli
-  ```
-
 
   ### download media 
 
-- 手動で aws コマンドを使用する場合を説明(for windows user とでも書いておく)
+- When using 'aws' command.(for windows user)
   ```bash
   aws s3 sync "s3://${AWS_BUCKET_NAME}" ./media/images 
   aws s3 sync "s3://${AWS_BUCKET_NAME}/original_images" ./media/original_images
