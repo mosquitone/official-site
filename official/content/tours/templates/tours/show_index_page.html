@@ -9,10 +9,13 @@
 
 {% block header %}
 {% endblock %}
-{% block content %}
-
+{% block topcontent %}
 {% image page.background_image width-1200 as background_image %}
-<div class="official background image max-height container" style="background-image: url('{{ background_image.url }}')">
+<div class="official fixed background image container" style="background-image: url('{{ background_image.url }}')"></div>
+{% endblock %}
+
+{% block content %}
+<div class="official max-height container">
     <div class="bandsintown container">
         <h1 class="ui inverted center aligned header">
             {{ page.title }}
