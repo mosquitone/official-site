@@ -26,7 +26,7 @@
         <div class="ui official link vertical large buttons">
             {% if page.primary_button_text %}
             {% if page.primary_button_link %}
-            <a href="{% pageurl page.primary_button_link %}" class="ui primary inverted transition hidden button">
+            <a href="{% pageurl page.primary_button_link %}" class="ui inverted basic gray transition hidden button">
                 {{ page.primary_button_text }}
                 <i class="right arrow icon"></i>
             </a>
@@ -34,7 +34,7 @@
             {% endif %}
             {% if page.primary_button_text %}
             {% if page.primary_button_link %}
-            <a href="{% pageurl page.secondary_button_link %}" class="ui secondary inverted transition hidden button">
+            <a href="{% pageurl page.secondary_button_link %}" class="ui inverted basic gray transition hidden button">
                 {{ page.secondary_button_text }}
                 <i class="right arrow icon"></i>
             </a>
