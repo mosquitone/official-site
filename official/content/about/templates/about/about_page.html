@@ -14,99 +14,101 @@
 <div class="official background image container" style="background-image: url('{{ background_image.url }}')"></div>
 {% endblock %}
 {% block content %}
-<div class="ui vertical segment container">
-    <div class="ui middle aligned stackable grid container">
-        <div class="row">
-            <div class="eight wide column">
-                <h1 class="ui header">{{ page.title }}</h1>
-                <div class="intro"> {{ page.intro|richtext }}</div>
-            </div>
-            <div class="six wide right floated column">
-                {% image page.main_image max-400x400 as main_image %}
-                <img {{ main_image.attrs }} class="ui large bordered circular image">
-            </div>
-        </div>
-        <div class="row">
-            <div class="center aligned column">
-                <h2 class="ui header">Members</h2>
-                <div class="ui four stackable cards">
-                    {% for member in members %}
-                    <div class="ui raised card">
-                        <div class="ui circular image">
-                            {% image member.icon max-500x500 %}
-                        </div>
-                        <div class="content">
-                            <h3 class="center aligned header">
-                                {{ member.japanese_name }}
-                            </h3>
-                            <div class="description">
-                                {{ member.english_name }}
-                            </div>
-                            <div class="meta">
-                                {{ member.part }}
-                            </div>
-                            <div class="extra">
-                                {% if member.facebook %}
-                                <a href="{{ member.facebook }}">
-                                    <button class="ui circular icon button">
-                                        <i class="facebook icon"></i>
-                                    </button>
-                                </a>
-                                {% endif %}
-                                {% if member.twitter %}
-                                <a href="{{ member.twitter }}">
-                                    <button class="ui circular icon button">
-                                        <i class="twitter icon"></i>
-                                    </button>
-                                </a>
-
-                                {% endif %}
-                                {% if member.instagram %}
-                                <a href="{{ member.instagram }}">
-                                    <button class="ui circular icon button">
-                                        <i class="instagram icon"></i>
-                                    </button>
-                                </a>
-                                {% endif %}
-                            </div>
-                        </div>
-
-                    </div>
-                    {% endfor %}
+<div class="ui vertical segment">
+    <div class="ui container">
+        <div class="ui middle aligned stackable grid container">
+            <div class="row">
+                <div class="eight wide column">
+                    <h1 class="ui header">{{ page.title }}</h1>
+                    <div class="intro"> {{ page.intro|richtext }}</div>
+                </div>
+                <div class="six wide right floated column">
+                    {% image page.main_image max-400x400 as main_image %}
+                    <img {{ main_image.attrs }} class="ui large bordered circular image">
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="center aligned column">
-                <div class="ui header">
-                    <h2>History</h2>
-                    <h3 class="ui sub header">ここまでの mosquitone</h3>
-                </div>
-                <div class="ui feed">
-                    {% for history in histories %}
-                    <div class="event">
-                        <div class="label">
-                            <div class="image avator">
-                                {% if history.by %}
-                                {% image history.by.avator max-100x100 %}
-                                {% else %}
-                                <img height="100" width="91" src="{% static 'image/mosquitone-avator.png' %}">
-                                {% endif %}
+            <div class="row">
+                <div class="center aligned column">
+                    <h2 class="ui header">Members</h2>
+                    <div class="ui four doubling cards container">
+                        {% for member in members %}
+                        <div class="ui raised card">
+                            <div class="ui circular image">
+                                {% image member.icon max-500x500 %}
                             </div>
-                        </div>
-                        <div class="content">
-                            <div class="summary">
-                                {{ history.sumarry }}
-                                <div class="date">
-                                    {{ history.date }}
+                            <div class="content">
+                                <h3 class="center aligned header">
+                                    {{ member.japanese_name }}
+                                </h3>
+                                <div class="description">
+                                    {{ member.english_name }}
+                                </div>
+                                <div class="meta">
+                                    {{ member.part }}
+                                </div>
+                                <div class="extra">
+                                    {% if member.facebook %}
+                                    <a href="{{ member.facebook }}">
+                                        <button class="ui circular icon button">
+                                            <i class="facebook icon"></i>
+                                        </button>
+                                    </a>
+                                    {% endif %}
+                                    {% if member.twitter %}
+                                    <a href="{{ member.twitter }}">
+                                        <button class="ui circular icon button">
+                                            <i class="twitter icon"></i>
+                                        </button>
+                                    </a>
+
+                                    {% endif %}
+                                    {% if member.instagram %}
+                                    <a href="{{ member.instagram }}">
+                                        <button class="ui circular icon button">
+                                            <i class="instagram icon"></i>
+                                        </button>
+                                    </a>
+                                    {% endif %}
                                 </div>
                             </div>
-                            <div class="extra text">
-                                {{ history.text }}
+
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="center aligned column">
+                    <div class="ui header">
+                        <h2>History</h2>
+                        <h3 class="ui sub header">ここまでの mosquitone</h3>
+                    </div>
+                    <div class="ui feed">
+                        {% for history in histories %}
+                        <div class="event">
+                            <div class="label">
+                                <div class="image avator">
+                                    {% if history.by %}
+                                    {% image history.by.avator max-100x100 %}
+                                    {% else %}
+                                    <img height="100" width="91" src="{% static 'image/mosquitone-avator.png' %}">
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="summary">
+                                    {{ history.sumarry }}
+                                    <div class="date">
+                                        {{ history.date }}
+                                    </div>
+                                </div>
+                                <div class="extra text">
+                                    {{ history.text }}
+                                </div>
                             </div>
                         </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
                 </div>
             </div>
         </div>
