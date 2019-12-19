@@ -1,17 +1,15 @@
-.official.link.buttons {
-  margin-top: 30px !important;
-}
-
 .official.header.container {
   margin-top: 10vh;
 }
 
 .official.ui.header {
+  margin-top: 10vh;
   font-size: 9em;
   font-weight: normal;
 }
 
 .official.ui.sub.header {
+  margin-top: 2vh;
   font-size: 2em;
 }
 
