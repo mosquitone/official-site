@@ -9,7 +9,7 @@ from wagtail.images.edit_handlers import ImageChooserPanel
 class HomePage(Page):
     body = RichTextField(blank=True)
     background_image = models.ForeignKey(
-        'wagtailimages.Image', null=True, blank=False,
+        'wagtailimages.Image', null=True, blank=True,
         on_delete=models.SET_NULL, related_name='+'
     )
     primary_button_link = models.ForeignKey(

@@ -14,7 +14,6 @@
 {% block header %}
 {% endblock %}
 {% block content %}
-{% image page.background_image width-700 as background_image %}
 <div class="ui inverted basic paper segment home max-height content">
     <div class="official header transition hidden container">
         <h1 class="official ui center aligned inverted header">
@@ -42,7 +41,9 @@
             {% endif %}
         </div>
     </div>
-    <div class="ui official image container" style="background-image: url('{{ background_image.url }}')">
+    {% image page.background_image width-700 as background_image %}
+    <div class="ui official image container" {% if background_image %}
+        style="background-image: url('{{ background_image.url }}')" {% endif %}>
         {{ page.body | richtext }}
     </div>
     {% endblock %}
