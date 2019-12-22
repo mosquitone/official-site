@@ -43,6 +43,11 @@
     </div>
     <div class="ui divider"></div>
     <div class="extra">
+        <div class="official share ui basic right floated labeled icon button"
+            data-title="{{ page.title }} - mosquitone" data-text="{{ page.title }}&#13;&#10;mosquitone">
+            <i class="share alternate icon"></i>
+            share!
+        </div>
         {% if page.tags.all.count %}
         {% for tag in page.tags.all %}
         <a class="ui tag label" href="{% routablepageurl page.news_index_page 'news_by_tag' tag.slug %}">{{tag}}</a>
