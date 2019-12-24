@@ -58,14 +58,17 @@ $(document)
         e.addEventListener('click', async () => {
           const shareData = {
             title: document.title,
-            url: '',
             ...e.dataset
           }
-          if (!shareData.url && 'text' in shareData) {
-            // Append current page url to end of text
-            const currentUrl = location.protocol + '//' + location.host + location.pathname;
-            shareData.text = shareData.text + '\n' + currentUrl;
-          }
+
+          // If URL is not provided.
+          // Set it to current location without parameter
+          const shareURLString = shareData.url || location.protocol + '//' + location.host + location.pathname;
+          const shareURL = new URL(shareURLString);
+          // Set tracking parameter
+          shareURL.searchParams.append('ref', 'share');
+          shareData.url = shareURL.toString();
+
           try {
             await navigator.share(shareData);
           } catch (err) {
