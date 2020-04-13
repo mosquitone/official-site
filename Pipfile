@@ -9,8 +9,8 @@ pylint = "*"
 
 [packages]
 awscli = "*"
-wagtail = ">=2.7"
-Django = ">=2.2"
+wagtail = ">=2.8"
+Django = ">=3.0"
 django-toolbelt = "*"
 whitenoise = "*"
 django-storages = "*"
