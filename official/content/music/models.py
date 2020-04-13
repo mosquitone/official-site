@@ -46,6 +46,7 @@ class MusicPage(Page):
     bandcamp_album_url = models.URLField(null=True, blank=True)
     bandcamp_player_url = models.URLField(null=True, blank=True)
     youtube_url = models.URLField(null=True, blank=True)
+    retailer_url = models.URLField(null=True, blank=True)
 
     @property
     def music_index_page(self):
@@ -64,6 +65,7 @@ class MusicPage(Page):
         FieldPanel('copy'),
         FieldPanel('description'),
         FieldPanel('youtube_url'),
+        FieldPanel('retailer_url'),
         FieldPanel('bandcamp_album_url'),
         FieldPanel('bandcamp_player_url'),
         InlinePanel('tracks', label="Tracks"),

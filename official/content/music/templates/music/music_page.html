@@ -43,12 +43,20 @@
                 </a>
                 {% endif %}
                 {% endif %}
-                {% if page.youtube_url %}
-                <a href="{{ page.youtube_url }}" class="ui circular icon youtube big button">
-                    <i class="youtube icon"></i>
-                    See Video
-                </a>
-                {% endif %}
+                <div class="ui buttons">
+                    {% if page.retailer_url %}
+                    <a href="{{ page.retailer_url }}" class="ui circular icon blue big button">
+                        <i class="music icon"></i>
+                        Listen/Buy
+                    </a>
+                    {% endif %}
+                    {% if page.youtube_url %}
+                    <a href="{{ page.youtube_url }}" class="ui circular icon youtube big button">
+                        <i class="youtube icon"></i>
+                        Watch Video
+                    </a>
+                    {% endif %}
+                </div>
             </div>
         </div>
         <p><a href="{% slugurl 'music' %}">Return to Music</a></p>
