@@ -59,6 +59,17 @@
                 </div>
             </div>
         </div>
+        {% if page.credits %}
+        <div class="extra">
+            <div class="ui right aligned basic segment">
+                <div class="ui list">
+                    {% for credit in page.credits.all %}
+                    <div class="item">{{ credit.role }}: {{ credit.name }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endif %}
         <p><a href="{% slugurl 'music' %}">Return to Music</a></p>
     </div>
 </div>

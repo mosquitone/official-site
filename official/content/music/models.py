@@ -69,6 +69,7 @@ class MusicPage(Page):
         FieldPanel('bandcamp_album_url'),
         FieldPanel('bandcamp_player_url'),
         InlinePanel('tracks', label="Tracks"),
+        InlinePanel('credits', label="Credits"),
     ]
 
 
@@ -81,4 +82,15 @@ class MusicTrack(Orderable):
     panels = [
         FieldPanel('title'),
         FieldPanel('duration'),
+    ]
+
+class MusicCreadit(Orderable):
+    page = ParentalKey(MusicPage, on_delete=models.CASCADE,
+                       related_name='credits')
+    role = models.CharField(blank=False, max_length=250)
+    name = models.CharField(blank=False, max_length=250)
+
+    panels = [
+        FieldPanel('role'),
+        FieldPanel('name'),
     ]
