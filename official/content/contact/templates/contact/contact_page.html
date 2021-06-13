@@ -11,52 +11,45 @@
 {% block header %}
 {% endblock %}
 {% block content %}
-<div class="official ui vertical stripe very padded max-height segment">
-    <div class="ui center aligned grid">
+<div class="official ui vertical stripe max-height very padded paper segment">
+    <div class="ui centered grid basic segment container">
         <div class="row">
-            <h1 class="ui centered header">{{ page.title }}</h1>
-        </div>
-        <div class="ui row divider"></div>
-        <div class="row">
-            <div class="ui center aligned header container">
-                <h2>
-                    Booking or General infomation
-                </h2>
-                <h3 class="sub header">ライブの出演依頼、各種お問い合わせは<a
-                        href="mailto:mosquitone8+contacts@gmail.com&subject=Ex.【ライブ出演依頼】【質問】">メール</a>にてご連絡ください。</h3>
+            <div class="ui centered header">
+                <h1 class="content">{{ page.title }}</h1>
+                <div class="ui sub header">ライブの出演依頼、各種お問い合わせはメールでご連絡ください。
+                </div>
             </div>
         </div>
         <div class="row">
-            <a href="mailto:mosquitone8+contacts@gmail.com&subject=E.g.【ライブ出演依頼】【質問】">
-                <h3 class="ui tiny icon header">
-                    <i class="mail icon"></i>
-                </h3>
-            </a>
-        </div>
-        <div class="ui row divider"></div>
-        <div class="row">
-            <div class="ui center aligned header">
-                <h2>SNS</h2>
-            </div>
-        </div>
-        <div class="row">
-
-            <div class="ui horizontal mini list">
-                {% for sns_account in sns_accounts %}
-                <div class="item">
-                    <a href="{{ sns_account.account_url }}">
-                        <h3 class="ui tiny icon header">
-                            <i class="{{ sns_account.sns_icon_name }} icon"></i>
-                            <div class="ui basic pointing mini label">
-                                {{ sns_account.account_name }}
-                            </div>
-                        </h3>
+            <div class="ui basic segment">
+                <div class="ui center aligned icon header">
+                    <div class="content">
+                        <h2>Email</h2>
+                    </div>
+                    <a href="mailto:mosquitone8+contacts@gmail.com&subject=Ex.【ライブ出演依頼】【質問">
+                        <i class="mail link black icon"></i>
                     </a>
                 </div>
-                {% endfor %}
             </div>
         </div>
-
+        <div class="row">
+            <div class="ui basic segment">
+                <div class="ui centered header">
+                    <h2>SNS</h2>
+                </div>
+                <div class="ui grid">
+                    {% for sns_account in sns_accounts %}
+                    <div class="three wide centered column">
+                        <h3 class="ui header">
+                            <a href="{{ sns_account.account_url }}">
+                                <i class="{{ sns_account.sns_icon_name }} black big icon"></i>
+                            </a>
+                        </h3>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}

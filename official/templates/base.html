@@ -51,7 +51,7 @@
     </menu>
 
     <!-- Sidebar Menu -->
-    <nav class="ui vertical inverted sidebar link menu">
+    <nav class="ui vertical inverted paper sidebar link menu">
         <a class="item" href="{% slugurl 'home' %}">Home</a>
         <a class="item" href="{% slugurl 'band' %}">Band</a>
         <a class="item" href="{% slugurl 'shows' %}">Shows</a>
@@ -63,7 +63,7 @@
     <!-- Page Contents -->
     <div class="official content pusher">
         {% block topcontent %}{% endblock %}
-        <header class="ui inverted vertical masthead center aligned segment">
+        <header class="ui inverted vertical masthead center aligned paper segment">
             <div class="ui container">
                 <nav class="ui large secondary inverted pointing menu">
                     <a class="logo link item" href="{% slugurl 'home' %}">
@@ -85,7 +85,7 @@
         <main>
             {% block content %}{% endblock %}
         </main>
-        <footer class="ui inverted vertical footer segment">
+        <footer class="ui inverted vertical footer paper segment">
             <div class="ui equal height grid container">
                 <div class="row">
                     <div class="ui grid container">
@@ -121,7 +121,7 @@
                 </div>
                 <div class="row">
                     <div class="column">
-                        <p>© 2019 mosquitone. All rights reserved.</p>
+                        <p>© {% now "Y" %} mosquitone. All rights reserved.</p>
                     </div>
                 </div>
             </div>

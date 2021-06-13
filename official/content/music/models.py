@@ -46,6 +46,7 @@ class MusicPage(Page):
     bandcamp_album_url = models.URLField(null=True, blank=True)
     bandcamp_player_url = models.URLField(null=True, blank=True)
     youtube_url = models.URLField(null=True, blank=True)
+    retailer_url = models.URLField(null=True, blank=True)
 
     @property
     def music_index_page(self):
@@ -64,9 +65,11 @@ class MusicPage(Page):
         FieldPanel('copy'),
         FieldPanel('description'),
         FieldPanel('youtube_url'),
+        FieldPanel('retailer_url'),
         FieldPanel('bandcamp_album_url'),
         FieldPanel('bandcamp_player_url'),
         InlinePanel('tracks', label="Tracks"),
+        InlinePanel('credits', label="Credits"),
     ]
 
 
@@ -79,4 +82,15 @@ class MusicTrack(Orderable):
     panels = [
         FieldPanel('title'),
         FieldPanel('duration'),
+    ]
+
+class MusicCreadit(Orderable):
+    page = ParentalKey(MusicPage, on_delete=models.CASCADE,
+                       related_name='credits')
+    role = models.CharField(blank=False, max_length=250)
+    name = models.CharField(blank=False, max_length=250)
+
+    panels = [
+        FieldPanel('role'),
+        FieldPanel('name'),
     ]
